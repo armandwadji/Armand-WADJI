@@ -1,0 +1,43 @@
+.cursor {
+  width: 35px;
+  height: 35px;
+  border: 1px solid $main_color;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.5s ease;
+  transition-property: background, transform;
+  transition: top 160ms ease-out;
+  transition: left 160ms ease-out;
+  z-index: 2;
+  // backdrop-filter: brightness(115%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $main_color;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &.hovered {
+    width: 25px;
+    height: 25px;
+
+    &::before {
+      width: 20px;
+      height: 20px;
+      opacity: 0.5;
+    }
+  }
+
+  @media (max-width: 800px) {
+    visibility: hidden;
+  }
+}

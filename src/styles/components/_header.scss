@@ -1,0 +1,135 @@
+.header {
+  //   background-color: red;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  padding: 20px 0 0;
+
+  .nav-toggler {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: $white-alpha-25;
+    border: 1px solid $white-alpha-40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 40px;
+    z-index: 1;
+
+    span {
+      height: 2px;
+      width: 24px;
+      background-color: $main_color;
+      position: relative;
+      transition: background-color 0.3s ease-in-out;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $main_color;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &::before {
+        left: 0;
+        transform: translateY((-8px));
+      }
+
+      &::after {
+        right: 0;
+        transform: translateY((8px));
+      }
+
+      //   &.active {
+      //     background-color: transparent;
+      //   }
+    }
+    &:hover span::before,
+    &:hover span::after {
+      width: 50%;
+    }
+  }
+
+  .nav {
+    // background-color: blue;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 35px 15px;
+    overflow-y: auto;
+    visibility: hidden;
+
+    &.active {
+      visibility: visible;
+
+      .nav-inner {
+        opacity: 1;
+      }
+    }
+
+    .nav-inner {
+      min-height: calc(100vh - 70px);
+      background-color: $white-alpha-25;
+      border: 1px solid $white-alpha-40;
+      border-radius: 30px;
+      max-width: 1200px;
+      margin: auto;
+      backdrop-filter: $backdrop-filter-blur;
+      padding: 50px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: all 0.5s ease-out;
+
+      ul {
+        // background-color: red;
+        li {
+          position: relative;
+          text-align: center;
+          font-size: 40px;
+          text-transform: capitalize;
+          color: $blue-dark;
+          display: block;
+          font-weight: 500;
+          padding: 8px 15px;
+          transition: color 0.3s ease-in-out;
+
+          &:hover {
+            color: $main_color;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0%;
+            height: 50%;
+            background-color: $white-alpha-25;
+            z-index: -1;
+            transition: width 0.5s ease-in-out;
+          }
+
+          &:hover::before {
+            width: 100%;
+          }
+
+          @media (max-width: 575px) {
+            font-size: 35px;
+          }
+        }
+      }
+    }
+  }
+}
