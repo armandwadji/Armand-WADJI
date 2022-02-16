@@ -203,7 +203,7 @@ const Contact = () => {
                   data-aos="zoom-out-left"
                   data-aos-duration="1500"
                 >
-                  <h3>Subject</h3>
+                  <h3>Telephone</h3>
                   <p>0755973768</p>
                 </div>
 
