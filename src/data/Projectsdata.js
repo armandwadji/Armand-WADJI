@@ -51,8 +51,8 @@ export const projectsData = [
     description:
       "Site e-commerce de vente de vêtements. Initialement écrit en JS Vanilla, j'ai totalement refais le code de l'application en React. Il est actuellement en évolution avec une base de donnée connectée à Firebase.",
     url: "https://i.postimg.cc/x1KPQdCh/projet-5.png",
-    site: "En développement",
-    link: "En développement",
+    site: "https://reactshoppingaw.netlify.app/",
+    link: "https://github.com/armandwadji/Armand-WADJI.git",
   },
   {
     id: 6,
