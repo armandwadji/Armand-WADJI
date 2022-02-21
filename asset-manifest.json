@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Armand-WADJI/static/css/main.d7b49cac.css",
+    "main.js": "/Armand-WADJI/static/js/main.6346fcd3.js",
+    "index.html": "/Armand-WADJI/index.html",
+    "main.d7b49cac.css.map": "/Armand-WADJI/static/css/main.d7b49cac.css.map",
+    "main.6346fcd3.js.map": "/Armand-WADJI/static/js/main.6346fcd3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7b49cac.css",
+    "static/js/main.6346fcd3.js"
+  ]
+}
