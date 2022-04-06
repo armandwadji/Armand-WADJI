@@ -5,8 +5,4 @@ react-dom
 sass
 emailjs
 # Armand-WADJI
-# Armand-WADJI
-# Armand-WADJI
-# Armand-WADJI
-# Armand-WADJI
-# Armand-WADJI
+
