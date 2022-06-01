@@ -35,27 +35,35 @@
       }
 
       .skills {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(60px, 80px));
+        row-gap: 0.2rem;
 
         .skill-item {
-          // background-color: $white-alpha-25;
-          // border: 1px solid $white-alpha-40;
+          // background-color: red;
           padding: 5px 15px;
           text-transform: capitalize;
           margin: 0 5px 5px 0;
           border-radius: 20px;
-          display: flex;
+          display: grid;
           align-items: center;
           justify-content: center;
+          text-align: center;
+          height: 60px;
+          width: 60px;
 
           i {
             width: calc(100% / 8 - 5px);
-            font-size: 2.7rem;
+            font-size: 2.8rem;
 
             @media (max-width: 767px) {
               width: calc(100% / 4 - 5px);
             }
+          }
+          p {
+            margin-top: 0.2rem;
+            color: $blue-dark;
+            font-size: 0.6rem;
           }
         }
       }

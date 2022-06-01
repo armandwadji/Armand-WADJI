@@ -2,40 +2,39 @@ import React from "react";
 import Btn from "./Btn";
 
 const Projet = ({ projet }) => {
+  const { title, img, desc, date, languages, website, github } = projet;
   return (
     <>
       <div className="portfolio-item">
         <div className="portfolio-item__thumbnail">
-          <img src={projet.url} alt={projet.title} />
+          <img src={img} alt={title} />
         </div>
-        <h3 className="portfolio-item__title">{projet.title}</h3>
+        <h3 className="portfolio-item__title">{title}</h3>
         <Btn name="view project" type="button" clas="btn hover" />
         <div className="portfolio-item__details">
           <div className="description">
-            <p>{projet.description}</p>
+            <p>{desc}</p>
           </div>
           <div className="general-info">
             <ul>
               <li>
-                Date de création - <span>{projet.date}</span>
+                Date de création - <span>{date}</span>
               </li>
               <li>
                 Technologies utilisées -{" "}
-                <span>
-                  {projet.languages.map((language) => language).join(", ")}
-                </span>
+                <span>{languages.map((language) => language).join(",")}</span>
               </li>
 
               <li>
                 Lien du site -{" "}
                 <span>
                   <a
-                    href={projet.site}
+                    href={website}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover "
                   >
-                    {projet.site}
+                    {website}
                   </a>
                 </span>
               </li>
@@ -43,12 +42,12 @@ const Projet = ({ projet }) => {
                 Lien <i className="fab fa-github"></i> -{" "}
                 <span>
                   <a
-                    href={projet.link}
+                    href={github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover "
                   >
-                    {projet.link}
+                    {github}
                   </a>
                 </span>
               </li>

@@ -1,18 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Btn from "./Btn";
+import DarkMode from "./DarkMode";
 
 const Header = () => {
-  const hideSection = () => {
+  const hideSection = (e) => {
     document.querySelector("section.active").classList.toggle("fade-out");
 
     document.querySelector(".nav").classList.toggle("active");
-    // document.querySelector(".nav-toggler").classList.toggle("active");
   };
   return (
     <div className="header hover" onClick={hideSection}>
       <div className="container">
         <div className="row flex-end ">
+          <DarkMode />
           <Btn
             type="button"
             clas="nav-toggler  "

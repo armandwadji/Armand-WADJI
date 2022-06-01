@@ -1,13 +1,14 @@
-import React from "react";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
 import Btn from "../components/Btn";
 import Header from "../components/Header";
 import Mouse from "../components/Mouse";
 import Overlay from "../components/Overlay";
 import Projet from "../components/Projet";
 import Title from "../components/Title";
-import { projectsData } from "../data/Projectsdata";
 
 const Portfolio = () => {
+  /*GESTION DE LA MODALE ET DE L'AFFICHAGE DE SES DIFFERENTS CONTENUS DIFFERENTS CONTENUS. */
   const popup = (e) => {
     if (e.target.classList.contains("btn")) {
       togglePortfolioPopup();
@@ -40,6 +41,21 @@ const Portfolio = () => {
       ".portfolio-item__details"
     ).innerHTML;
   };
+  /**********************************/
+
+  /**********FETCH API*************/
+  const [projects, setprojects] = useState("");
+  useEffect(() => {
+    axios
+      .get("https://gentle-cove-03695.herokuapp.com/portfolio/projects/")
+      .then((res) => {
+        const {
+          data: { data },
+        } = res;
+        setprojects(data);
+      });
+  }, []);
+  /**********************************/
 
   return (
     <div
@@ -58,9 +74,10 @@ const Portfolio = () => {
             </div>
             <div className="row">
               {/* UTILSATION DE REACT */}
-              {projectsData.map((projet) => {
-                return <Projet key={projet.id} projet={projet} />;
-              })}
+              {projects &&
+                projects.map((projet) => {
+                  return <Projet key={projet.id} projet={projet} />;
+                })}
             </div>
           </div>
         </section>

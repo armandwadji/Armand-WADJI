@@ -79,51 +79,53 @@ const About = () => {
                 >
                   <div className="skill-item">
                     <i
-                      className="fab fa-html5"
-                      style={{ color: "rgb(226,66,25)" }}
-                    ></i>
-                  </div>
-                  <div className="skill-item">
-                    <i
-                      className="fab fa-css3-alt"
-                      style={{ color: "rgb(38,137,204)" }}
-                    ></i>
-                  </div>
-                  <div className="skill-item">
-                    <i
                       className="fab fa-js"
                       style={{ color: "rgb(214,186,50)" }}
                     ></i>
-                  </div>
-                  <div className="skill-item">
-                    <i
-                      className="fab fa-sass"
-                      style={{ color: "rgb(208,119,164)" }}
-                    ></i>
-                  </div>
-                  <div className="skill-item">
-                    <i
-                      className="fab fa-bootstrap"
-                      style={{ color: "rgb(85,62,124)" }}
-                    ></i>
+                    <p>javascript</p>
                   </div>
                   <div className="skill-item">
                     <i
                       className="fab fa-react"
                       style={{ color: "rgb(104,220,251)" }}
                     ></i>
+                    <p>React</p>
+                  </div>
+                  <div className="skill-item">
+                    <i
+                      className="fab fa-node-js"
+                      style={{ color: "rgb(83,157,67)" }}
+                    ></i>
+                    <p>Node.js</p>
+                  </div>
+                  <div className="skill-item">
+                    <i
+                      className="fab fa-java"
+                      style={{ color: "rgb(117,161,251)" }}
+                    ></i>
+                    <p>Java</p>
                   </div>
                   <div className="skill-item">
                     <i
                       className="fab fa-python"
                       style={{ color: "rgb(54,112,160)" }}
                     ></i>
+                    <p>Python</p>
                   </div>
+                  <div className="skill-item">
+                    <i
+                      className="fab fa-sass"
+                      style={{ color: "rgb(208,119,164)" }}
+                    ></i>
+                    <p>Sass</p>
+                  </div>
+
                   <div className="skill-item">
                     <i
                       className="fab fa-git"
                       style={{ color: "rgb(232,79,49)" }}
                     ></i>
+                    <p>Git</p>
                   </div>
                 </div>
                 {/* BUTTTONS  */}
