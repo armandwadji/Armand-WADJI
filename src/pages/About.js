@@ -127,65 +127,6 @@ const About = () => {
                         />
                       );
                     })}
-                    {/* <div className="timeline-item">
-                      <span className="date">janv 2018 - Aout 2021</span>
-                      <h4>
-                        Professeur de Maths-Sciences -{" "}
-                        <span>LPO Raphael Elyze (Sablé Sur Sarthe)</span>
-                      </h4>
-                      <ul>
-                        <li>
-                          Cours d’initiations au langage PYTHON depuis la
-                          réforme du Bac de 2019
-                        </li>
-                        <li>Gestion de classe, différenciation pédagogique</li>
-                        <li>
-                          Mise en place d'une progression annuelle au sein d'une
-                          équipe pédagogique
-                        </li>
-                        <li>
-                          Professeur principal pendant deux ans avec toutes les
-                          fonctions associées.
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="timeline-item">
-                      <span className="date">Fev 2017 - Sept 2017</span>
-                      <h4>
-                        Ingénieur stagiaire en bureaux d'études -{" "}
-                        <span>BETA EPSILON (le Mans)</span>
-                      </h4>
-                      <ul>
-                        <li>
-                          Conception d'un banc de test de résistance pour le
-                          chassis d'un véhicule électrique
-                        </li>
-                        <li>
-                          Automatisation de la procédure de test par
-                          programmation d'une automate SIEMENS
-                        </li>
-                        <li>
-                          Coordination entre la maquette 3D SOLIDWORKS et la
-                          fabrication en atelier
-                        </li>
-                        <li>
-                          Mise en place d'une documetation des procédures de
-                          tests
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="timeline-item">
-                      <span className="date">Janv 2015 - Aout 2015</span>
-                      <h4>
-                        STAGIAIRE - <span>CFAO</span>
-                      </h4>
-                      <ul>
-                        <li>
-                          Mise à jours des systèmes d'exploitations de
-                          l'entreprise par remastérisation automatique
-                        </li>
-                      </ul>
-                    </div> */}
                   </div>
                 </div>
                 {/*  BUTTON BOTTOM */}
