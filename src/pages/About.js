@@ -7,11 +7,18 @@ import Title from "../components/Title";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { AboutData } from "../data/AboutData";
+import Skills from "../components/Skills";
+import Education from "../components/Education";
+import Experiences from "../components/Experiences";
 
 const About = () => {
+  //UseEffect pour les animations
   useEffect(() => {
     AOS.init();
   }, []);
+
+  //Toggle pour l'expérience et l'éducation. Hobbies à rajouter
   const toggleClass = (e) => {
     const tabItem = document.querySelectorAll(".tab-item");
     const tabContent = document.querySelectorAll(".tab-content");
@@ -24,6 +31,7 @@ const About = () => {
       });
     }
   };
+  const [{ educations }, { experiences }, { skills }] = AboutData;
 
   return (
     <>
@@ -77,56 +85,9 @@ const About = () => {
                   data-aos="zoom-out"
                   data-aos-duration="1000"
                 >
-                  <div className="skill-item">
-                    <i
-                      className="fab fa-js"
-                      style={{ color: "rgb(214,186,50)" }}
-                    ></i>
-                    <p>javascript</p>
-                  </div>
-                  <div className="skill-item">
-                    <i
-                      className="fab fa-react"
-                      style={{ color: "rgb(104,220,251)" }}
-                    ></i>
-                    <p>React</p>
-                  </div>
-                  <div className="skill-item">
-                    <i
-                      className="fab fa-node-js"
-                      style={{ color: "rgb(83,157,67)" }}
-                    ></i>
-                    <p>Node.js</p>
-                  </div>
-                  <div className="skill-item">
-                    <i
-                      className="fab fa-java"
-                      style={{ color: "rgb(117,161,251)" }}
-                    ></i>
-                    <p>Java</p>
-                  </div>
-                  <div className="skill-item">
-                    <i
-                      className="fab fa-python"
-                      style={{ color: "rgb(54,112,160)" }}
-                    ></i>
-                    <p>Python</p>
-                  </div>
-                  <div className="skill-item">
-                    <i
-                      className="fab fa-sass"
-                      style={{ color: "rgb(208,119,164)" }}
-                    ></i>
-                    <p>Sass</p>
-                  </div>
-
-                  <div className="skill-item">
-                    <i
-                      className="fab fa-git"
-                      style={{ color: "rgb(232,79,49)" }}
-                    ></i>
-                    <p>Git</p>
-                  </div>
+                  {skills.map((skill) => {
+                    return <Skills key={skill.id} skill={skill} />;
+                  })}
                 </div>
                 {/* BUTTTONS  */}
                 <div className="about-tabs" onClick={(e) => toggleClass(e)}>
@@ -148,54 +109,25 @@ const About = () => {
                   data-aos-duration="1000"
                 >
                   <div className="timeline">
-                    <div className="timeline-item">
-                      <span className="date">Sept 2022 - Aout 2023</span>
-                      <h4>
-                        Dévéloppeur Web et mobile -{" "}
-                        <span>CEFIM L'école du Web et du Réseau (Tours) </span>
-                      </h4>
-
-                      <ul>
-                        <li>HTML/ CSS / SASS/ BOOSTRAP</li>
-                        <li>JAVASCRIPT / React JS</li>
-                        <li>PHP/ SYMPHONY</li>
-                        <li>WORDPRESS / Adobe XD/ Gestion de projet</li>
-                      </ul>
-                    </div>
-
-                    <div className="timeline-item">
-                      <span className="date">Sept 2021 - Aujourd’hui</span>
-                      <h4>
-                        Formation en autodidacte -{" "}
-                        <span>Diverses plateformes de cours en lignes</span>
-                      </h4>
-                      <ul>
-                        <li>FRANCEIOI</li>
-                        <li>OPENCLASSROOMS</li>
-                        <li>CODECADEMY</li>
-                        <li>FREE-CODE-CAMP</li>
-                      </ul>
-                    </div>
-
-                    <div className="timeline-item">
-                      <span className="date">Sept 2017</span>
-                      <h4>
-                        Master 2 Ingénierie et conception Mécanique INPAM -{" "}
-                        <span>Université du Maine - LE MANS</span>
-                      </h4>
-                      <ul>
-                        <li>CATIA</li>
-                        <li>SOLIDWORKS</li>
-                        <li>SIEMENS</li>
-                        <li>MATLAB</li>
-                      </ul>
-                    </div>
+                    {educations.map((education) => {
+                      return (
+                        <Education key={education.id} education={education} />
+                      );
+                    })}
                   </div>
                 </div>
                 {/* Experience */}
                 <div className="tab-content">
                   <div className="timeline">
-                    <div className="timeline-item">
+                    {experiences.map((experience) => {
+                      return (
+                        <Experiences
+                          key={experience.id}
+                          experience={experience}
+                        />
+                      );
+                    })}
+                    {/* <div className="timeline-item">
                       <span className="date">janv 2018 - Aout 2021</span>
                       <h4>
                         Professeur de Maths-Sciences -{" "}
@@ -217,7 +149,6 @@ const About = () => {
                         </li>
                       </ul>
                     </div>
-
                     <div className="timeline-item">
                       <span className="date">Fev 2017 - Sept 2017</span>
                       <h4>
@@ -243,7 +174,6 @@ const About = () => {
                         </li>
                       </ul>
                     </div>
-
                     <div className="timeline-item">
                       <span className="date">Janv 2015 - Aout 2015</span>
                       <h4>
@@ -255,7 +185,7 @@ const About = () => {
                           l'entreprise par remastérisation automatique
                         </li>
                       </ul>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 {/*  BUTTON BOTTOM */}

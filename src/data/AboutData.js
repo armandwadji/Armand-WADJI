@@ -1,12 +1,12 @@
 export const AboutData = [
   {
-    education: [
+    educations: [
       {
         id: 1,
         period: "Sept 2022 - Aout 2023",
         title: "Dévéloppeur Web et mobile",
         school: "CEFIM L'école du Web et du Réseau (Tours)",
-        study: [
+        studys: [
           "HTML/ CSS / SASS/ BOOSTRAP",
           "JAVASCRIPT / React JS",
           "PHP/ SYMPHONY",
@@ -18,17 +18,19 @@ export const AboutData = [
         period: "Sept 2021 - Aujourd’hui",
         title: "Formation en autodidacte",
         school: "Diverses plateformes de cours en lignes",
-        study: ["FRANCEIOI", "OPENCLASSROOMS", "CODECADEMY", "FREE-CODE-CAMP"],
+        studys: ["FRANCEIOI", "OPENCLASSROOMS", "CODECADEMY", "FREE-CODE-CAMP"],
       },
       {
         id: 3,
         period: "Sept 2021- Sept 2017",
         title: "Master 2 Ingénierie et conception Mécanique INPAM",
         school: "Université du Maine - LE MANS",
-        study: ["CATIA", "SOLIDWORKS", "SIEMENS", "MATLAB"],
+        studys: ["CATIA", "SOLIDWORKS", "SIEMENS", "MATLAB"],
       },
     ],
-    experience: [
+  },
+  {
+    experiences: [
       {
         id: 1,
         period: "janv 2018 - Aout 2021",
@@ -63,7 +65,9 @@ export const AboutData = [
         ],
       },
     ],
-    technologies: [
+  },
+  {
+    skills: [
       {
         id: 1,
         title: "javascript",
@@ -93,6 +97,18 @@ export const AboutData = [
         title: "Git",
         icon: "fab fa-git",
         color: "rgb(232,79,49)",
+      },
+      {
+        id: 6,
+        title: "Sass",
+        icon: "fab fa-sass",
+        color: "rgb(208,119,164)",
+      },
+      {
+        id: 7,
+        title: "Python",
+        icon: "fab fa-python",
+        color: "rgb(54,112,160)",
       },
     ],
   },
