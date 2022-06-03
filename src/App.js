@@ -24,6 +24,7 @@ function App() {
   return (
     <>
       <Routes>
+        {/* Armand-WADJI */}
         <Route path="/Armand-WADJI" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />

@@ -23,6 +23,7 @@ const Header = () => {
           <nav className="nav">
             <div className="nav-inner">
               <ul>
+                {/* Armand-WADJI */}
                 <Link to="/Armand-WADJI" className="nav-item">
                   <li> Home</li>
                 </Link>

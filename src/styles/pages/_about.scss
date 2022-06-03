@@ -85,6 +85,11 @@
           opacity: 0.5;
           transition: all 0.3s ease-out;
 
+          @media (max-width: 767px) {
+            font-size: 1rem;
+            margin: 0 20px 0 0;
+          }
+
           &:last-child {
             margin: 0;
           }
