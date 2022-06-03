@@ -159,7 +159,7 @@ const About = () => {
                 </div>
                 {/*  BUTTON BOTTOM */}
                 <a
-                  href="https://i.postimg.cc/gjX08q8N/ARMAND-WADJI-CV.png"
+                  href="https://i.postimg.cc/440KPDr3/ARMAND-WADJI-CV.png"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover "
