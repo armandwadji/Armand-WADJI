@@ -1,16 +1,39 @@
 /******** VARIABLES *************/
+:root {
+  --main-color: #e02f6b;
+  --blue: #0000ff;
+  --blue-dark: #18293c;
+  --orange: #ffa500;
+  --green-yellow: #cddc39;
+  --pink-light: #efa2b4;
+  --cyan-light: #aef1ee;
+  --white: #ffffff;
+  --white-alpha-40: rgba(255, 255, 255, 0.4);
+  --white-alpha-25: rgba(255, 255, 255, 0.25);
+  --backdrop-filter-blur: blur(5px);
+}
 
-$main_color: #e02f6b;
-$blue: #0000ff;
-$blue-dark: #18293c;
-$orange: #ffa500;
-$green-yellow: #cddc39;
-$pink-light: #efa2b4;
-$cyan-light: #aef1ee;
-$white: #ffffff;
-$white-alpha-40: rgba(255, 255, 255, 0.4);
-$white-alpha-25: rgba(255, 255, 255, 0.25);
-$backdrop-filter-blur: blur(5px);
+$main_color: var(--main-color);
+$blue: var(--blue);
+$blue-dark: var(--blue-dark);
+$orange: var(--orange);
+$green-yellow: var(--green-yellow);
+$pink-light: var(--pink-light);
+$cyan-light: var(--cyan-light);
+$white: var(--white);
+$white-alpha-40: var(--white-alpha-40);
+$white-alpha-25: var(--white-alpha-25);
+$backdrop-filter-blur: var(--backdrop-filter-blur);
+
+/********DARKMODE*********/
+.darkmode {
+  --pink-light: #1b2026;
+  --cyan-light: #000000;
+  --white-alpha-40: rgba(255, 255, 255, 0.385);
+  --white-alpha-25: rgba(255, 255, 255, 0.09);
+  --blue-dark: #ffffff;
+  --main-color: #e02f6b;
+}
 
 /***********FONTS FAMILY*******/
 
@@ -59,6 +82,22 @@ body {
 
   &.hide-scrolling {
     overflow-y: hidden;
+  }
+}
+
+body.darkmode {
+  --pink-light: #1b2026;
+  --cyan-light: #000000;
+  --white-alpha-40: rgba(255, 255, 255, 0.385);
+  --white-alpha-25: rgba(255, 255, 255, 0.09);
+  --blue-dark: #ffffff;
+
+  .contact-form {
+    .input-control {
+      &:focus {
+        border: 1px solid $main_color;
+      }
+    }
   }
 }
 

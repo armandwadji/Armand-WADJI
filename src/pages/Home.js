@@ -16,6 +16,7 @@ const Home = () => {
     <>
       <Overlay />
       <Mouse />
+
       {/* main start */}
       <div className="main ">
         <Bubble />
