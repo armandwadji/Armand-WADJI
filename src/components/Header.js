@@ -24,7 +24,7 @@ const Header = () => {
             <div className="nav-inner">
               <ul>
                 {/* Armand-WADJI */}
-                <Link to="/Armand-WADJI" className="nav-item">
+                <Link to="/" className="nav-item">
                   <li> Home</li>
                 </Link>
                 <Link to="/about" className="nav-item">
