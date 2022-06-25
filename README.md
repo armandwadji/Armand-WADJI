@@ -1,18 +1,53 @@
+<div>
+  <h1 align="center">
+    <a href="https://github.com/armandwadji/Armand-WADJI.git">Portfolio 💼
+    </a>  
+  </h1>
+</div> 
+
+lien du site : [Portfolio](https://armandwadji.netlify.app)
+
+<img width="2560" alt="Capture d’écran 2022-05-26 à 04 09 02" src="https://user-images.githubusercontent.com/90448006/175752103-0d982774-66da-46be-99db-32147df8c9b1.png">
+
+## Configuration requise
+
+- [git][git]
+- [NodeJS][node]
+- [npm][npm]
+
+## Installation
+Après avoir installé les configurations du projet, vous pouvez executer cette commande pour installer le projet en local su votre machine :
+
+```
+git clone https://github.com/armandwadji/Armand-WADJI.git
+```
+
+Ensuite il faudra installer les dépendances du projet avec la commande suivante :
+
+```
 npm install
+```
+## Démarrer l'application
+Une fois les dependances correctement installer, lancer enfin le projet grâce a commande suivante :
 
-react-router-dom
-react-dom
-sass
-emailjs
+```
+npm start
+```
 
-# Armand-WADJI-CV
+## Executer les tests
 
-lien du site : https://armandwadji.netlify.app
+```
+npm run test
+```
 
-<img width="2560" alt="Capture d’écran 2022-05-26 à 04 09 02" src="https://user-images.githubusercontent.com/90448006/170401065-2af8b6cc-2c2d-490f-8d88-e45ec925174d.png">
+## Dependance importante
 
-"homepage": "https://armandwadji.github.io/Armand-WADJI",
+Pour la gestion des emails, j'ai utilisé la librairie [Emailjs](https://www.emailjs.com/docs/)
 
-# Armand-WADJI
+<h1 align="center">Bon Code 🖥 💻 📱</h1>
 
-# portfolio-developpement
+<!-- prettier-ignore-start -->
+[npm]: https://www.npmjs.com/
+[node]: https://nodejs.org
+[git]: https://git-scm.com/
+<!-- prettier-ignore-end -->
