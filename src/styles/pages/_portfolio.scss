@@ -11,6 +11,7 @@
       border: 1px solid $white-alpha-40;
       border-radius: 10px;
       height: 60%;
+      margin-bottom: 20px;
 
       img {
         width: 100%;
@@ -27,7 +28,8 @@
     h3 {
       font-size: 20px;
       text-transform: capitalize;
-      margin: 20px 0;
+      margin: 15px 0;
+      padding-left: 5px;
     }
     @media (max-width: 991px) {
       width: calc(50% - 30px);

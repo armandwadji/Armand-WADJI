@@ -1,11 +1,13 @@
-import axios from "axios";
-import React, { useState, useEffect } from "react";
+// import axios from "axios";
+import React from "react";
+// { useState, useEffect }
 import Btn from "../components/Btn";
 import Header from "../components/Header";
 import Mouse from "../components/Mouse";
 import Overlay from "../components/Overlay";
 import Projet from "../components/Projet";
 import Title from "../components/Title";
+import { projectsData } from "../data/Projectsdata";
 
 const Portfolio = () => {
   /*GESTION DE LA MODALE ET DE L'AFFICHAGE DE SES DIFFERENTS CONTENUS DIFFERENTS CONTENUS. */
@@ -44,38 +46,39 @@ const Portfolio = () => {
   /**********************************/
 
   /**********FETCH API*************/
-  const [projects, setprojects] = useState("");
-  useEffect(() => {
-    axios
-      .get("https://gentle-cove-03695.herokuapp.com/portfolio/projects/")
-      .then((res) => {
-        const {
-          data: { data },
-        } = res;
-        setprojects(data);
-      });
-  }, []);
+  // const [projects, setprojects] = useState("");
+  // setprojects(projectsData);
+
+  // useEffect(() => {
+  //   axios
+  //     .get("https://gentle-cove-03695.herokuapp.com/portfolio/projects/")
+  //     .then((res) => {
+  //       const {
+  //         data: { data },
+  //       } = res;
+  //       setprojects(data);
+  //     });
+  // }, []);
   /**********************************/
 
   return (
     <div
       onClick={(e) => {
         popup(e);
-      }}
-    >
+      }}>
       <Overlay />
       <Mouse />
-      <div className="main">
+      <div className='main'>
         <Header />
-        <section className="portfolio-section sec-padding active">
-          <div className="container">
-            <div className="row">
-              <Title title="Portfolio" />
+        <section className='portfolio-section sec-padding active'>
+          <div className='container'>
+            <div className='row'>
+              <Title title='Portfolio' />
             </div>
-            <div className="row">
+            <div className='row'>
               {/* UTILSATION DE REACT */}
-              {projects &&
-                projects.map((projet) => {
+              {projectsData &&
+                projectsData.map((projet) => {
                   return <Projet key={projet.id} projet={projet} />;
                 })}
             </div>
@@ -83,21 +86,21 @@ const Portfolio = () => {
         </section>
       </div>
 
-      <div className="portfolio-popup">
-        <div className="pp-inner">
-          <div className="pp-content">
-            <div className="pp-header">
+      <div className='portfolio-popup'>
+        <div className='pp-inner'>
+          <div className='pp-content'>
+            <div className='pp-header'>
               <Btn
-                type="button"
-                clas="btn hover"
-                name={<i className="fas fa-times"></i>}
+                type='button'
+                clas='btn hover'
+                name={<i className='fas fa-times'></i>}
               />
-              <div className="pp-thumbnail">
-                <img src="" alt="" />
+              <div className='pp-thumbnail'>
+                <img src='' alt='' />
               </div>
             </div>
             <h3>{""}</h3>
-            <div className="pp-body"></div>
+            <div className='pp-body'></div>
           </div>
         </div>
       </div>
