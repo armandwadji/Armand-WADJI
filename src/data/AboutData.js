@@ -15,7 +15,7 @@ export const AboutData = [
       },
       {
         id: 2,
-        period: "Sept 2021 - Aujourd’hui",
+        period: "Sept 2021 - Aout 2022",
         title: "Formation en autodidacte",
         school: "Diverses plateformes de cours en lignes",
         studys: ["FRANCEIOI", "OPENCLASSROOMS", "CODECADEMY", "FREE-CODE-CAMP"],

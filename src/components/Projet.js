@@ -14,11 +14,11 @@ const Projet = ({ projet }) => {
   return (
     <>
       <div className='portfolio-item'>
-        <h3 className='portfolio-item__title'>{title}</h3>
-
         <div className='portfolio-item__thumbnail'>
           <img src={img} alt={title} />
         </div>
+
+        <h3 className='portfolio-item__title'>{title}</h3>
 
         <Btn name='view project' type='button' clas='btn hover' />
         <div className='portfolio-item__details'>
