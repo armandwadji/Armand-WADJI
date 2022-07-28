@@ -44,6 +44,12 @@ npm run test
 
 Pour la gestion des emails, j'ai utilisé la librairie [Emailjs](https://www.emailjs.com/docs/)
 
+<p align="right">Back to top : 
+  <a href="#top">
+    ☝
+  </a>
+</p>
+
 <h1 align="center">Bon Code 🖥 💻 📱</h1>
 
 <!-- prettier-ignore-start -->
