@@ -121,8 +121,9 @@ export const AboutData = [
         who: "Caïmans 72 (Le Mans)",
         color: "rgb(177,89,70)",
         desc: [
-          "Deux fois champion régional grand ouest (2018-2019).",
-          "Deuxième place en D2 du championat de france (2016).",
+          "Champion de france (2022).",
+          "Double champion régional grand ouest (2018 / 2019).",
+          "Deuxième du championat de france D2 (2016).",
           "Coach de la ligne défensive de l'équipe junior du club.",
           "Bénévole pour les activités associatives du club.",
         ],

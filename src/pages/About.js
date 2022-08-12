@@ -54,81 +54,78 @@ const About = () => {
     <>
       <Overlay />
       <Mouse />
-      <div className="main">
+      <div className='main'>
         <Header />
-        <section className="about-section sec-padding active">
-          <div className="container">
+        <section className='about-section sec-padding active'>
+          <div className='container'>
             <div
-              className="row"
-              data-aos="zoom-out-left"
-              data-aos-duration="1000"
-            >
-              <Title title="About Me" />
+              className='row'
+              data-aos='zoom-out-left'
+              data-aos-duration='1000'>
+              <Title title='About Me' />
             </div>
 
-            <div className="row">
+            <div className='row'>
               <div
-                className="about-img"
-                data-aos="fade-down"
-                data-aos-easing="linear"
-                data-aos-duration="1000"
-              >
-                <div className="img-box">
+                className='about-img'
+                data-aos='fade-down'
+                data-aos-easing='linear'
+                data-aos-duration='1000'>
+                <div className='img-box'>
                   <img
-                    src="https://i.postimg.cc/nzdkWwzL/profil.jpg"
-                    alt="about-pic"
+                    src='https://i.postimg.cc/nzdkWwzL/profil.jpg'
+                    alt='about-pic'
                   />
                 </div>
               </div>
 
-              <div className="about-text">
+              <div className='about-text'>
                 <p
-                  data-aos="zoom-out-left"
-                  data-aos-duration="1000"
-                  data-aos-delay="500"
-                >
+                  data-aos='zoom-out-left'
+                  data-aos-duration='1000'
+                  data-aos-delay='500'>
                   J'ai {new Date().getFullYear() - 1994} ans et j'ai été
-                  professeur de Maths - Sciences pendant 4 ans. Aujourd’hui je
-                  me forme au développement Web en autodidacte, et Je suis à la
-                  recherche d'une entreprise qui me permettrait d'effectuer un
-                  contrat d'apprentissage d'un an dans le but de consolider et
-                  de valider mes compétences.
+                  professeur de Maths - Sciences pendant 4 ans. Après une année
+                  de formation du code en autodidacte, j'ai décidé aujourd’hui,
+                  dans le cadre d'une reconversion professionnelle, de faire de
+                  la programmation mon métier. J'ai donc intégré l'école de
+                  formation CEFIM pour une année d'alternance que j'effectue
+                  dans la société APOTAMOX en tant que Developpeur Web et
+                  Mobile.
                 </p>
-                <h3 data-aos="zoom-out" data-aos-duration="1000">
+                <h3 data-aos='zoom-out' data-aos-duration='1000'>
                   Skills
                 </h3>
                 {/* SKILLS  */}
                 <div
-                  className="skills"
-                  data-aos="zoom-out"
-                  data-aos-duration="1000"
-                >
+                  className='skills'
+                  data-aos='zoom-out'
+                  data-aos-duration='1000'>
                   {skills.map((skill) => {
                     return <Skills key={skill.id} skill={skill} />;
                   })}
                 </div>
                 {/* BUTTTONS  */}
-                <div className="about-tabs" onClick={(e) => toggleClass(e)}>
-                  <button className="tab-item active hover" data-id="education">
+                <div className='about-tabs' onClick={(e) => toggleClass(e)}>
+                  <button className='tab-item active hover' data-id='education'>
                     Education
                   </button>
 
-                  <button className="tab-item hover" data-id="experience">
+                  <button className='tab-item hover' data-id='experience'>
                     Experiences
                   </button>
 
-                  <button className="tab-item hover" data-id="hobbies">
+                  <button className='tab-item hover' data-id='hobbies'>
                     Hobbies
                   </button>
                 </div>
                 {/* EDUCATION */}
                 <div
-                  className="tab-content active "
-                  id="education"
-                  data-aos="zoom-in-right"
-                  data-aos-duration="1000"
-                >
-                  <div className="timeline">
+                  className='tab-content active '
+                  id='education'
+                  data-aos='zoom-in-right'
+                  data-aos-duration='1000'>
+                  <div className='timeline'>
                     {educations.map((education) => {
                       return (
                         <Education key={education.id} education={education} />
@@ -137,8 +134,8 @@ const About = () => {
                   </div>
                 </div>
                 {/* Experience */}
-                <div className="tab-content" id="experience">
-                  <div className="timeline">
+                <div className='tab-content' id='experience'>
+                  <div className='timeline'>
                     {experiences.map((experience) => {
                       return (
                         <Experiences
@@ -150,8 +147,8 @@ const About = () => {
                   </div>
                 </div>
                 {/* HOBBIES */}
-                <div className="tab-content" id="hobbies">
-                  <div className="timeline">
+                <div className='tab-content' id='hobbies'>
+                  <div className='timeline'>
                     {hobbies.map((hobbie) => {
                       return <Hobbies key={hobbie.id} hobbie={hobbie} />;
                     })}
@@ -159,25 +156,23 @@ const About = () => {
                 </div>
                 {/*  BUTTON BOTTOM */}
                 <a
-                  href="https://i.postimg.cc/440KPDr3/ARMAND-WADJI-CV.png"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover "
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-once="false"
-                >
-                  <Btn name="Dowload CV" type="button" />
+                  href='https://i.postimg.cc/440KPDr3/ARMAND-WADJI-CV.png'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='hover '
+                  data-aos='fade-up'
+                  data-aos-duration='1000'
+                  data-aos-once='false'>
+                  <Btn name='Dowload CV' type='button' />
                 </a>{" "}
                 <Link
-                  to="/contact"
-                  exact="true"
-                  className="hover"
-                  data-aos="fade-up"
-                  data-aos-duration="500"
-                  data-aos-once="false"
-                >
-                  <Btn name="Contact me" type="button" />
+                  to='/contact'
+                  exact='true'
+                  className='hover'
+                  data-aos='fade-up'
+                  data-aos-duration='500'
+                  data-aos-once='false'>
+                  <Btn name='Contact me' type='button' />
                 </Link>
               </div>
             </div>
