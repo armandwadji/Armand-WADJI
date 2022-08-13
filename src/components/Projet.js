@@ -11,6 +11,9 @@ const Projet = ({ projet }) => {
     website,
     github,
   } = projet;
+
+  // console.log(github.split("/").at(-1).split(".").at(0));
+
   return (
     <>
       <div className='portfolio-item'>
@@ -35,18 +38,20 @@ const Projet = ({ projet }) => {
                 <span>{languages.map((language) => language).join(" /")}</span>
               </li>
 
-              <li>
-                Lien du site -{" "}
-                <span>
-                  <a
-                    href={website}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='hover '>
-                    {website}
-                  </a>
-                </span>
-              </li>
+              {website !== "" && (
+                <li>
+                  Lien du site -{" "}
+                  <span>
+                    <a
+                      href={website}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='hover '>
+                      {website.split("/").at(-1).split(".").at(0)}
+                    </a>
+                  </span>
+                </li>
+              )}
               <li>
                 Lien <i className='fab fa-github'></i> -{" "}
                 <span>
@@ -55,7 +60,7 @@ const Projet = ({ projet }) => {
                     target='_blank'
                     rel='noopener noreferrer'
                     className='hover '>
-                    {github}
+                    {github.split("/").at(-1).split(".").at(0)}
                   </a>
                 </span>
               </li>

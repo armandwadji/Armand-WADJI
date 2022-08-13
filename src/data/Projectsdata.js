@@ -56,7 +56,7 @@ export const projectsData = [
     languages: ["javascript", "React Native"],
     desc: "Application React-Native du site Comfy Store initialement fait en JavaScript Vanilla.",
     img: "https://i.postimg.cc/hj1YQTdS/Capture-d-e-cran-2022-07-26-a-01-16.jpg",
-    website: " ",
+    website: "",
     github: "https://github.com/armandwadji/Comfy-Store-App.git",
   },
 ];

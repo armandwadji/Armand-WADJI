@@ -89,7 +89,7 @@ const Portfolio = () => {
             <div className='pp-header'>
               <Btn
                 type='button'
-                clas='btn hover'
+                className='btn hover'
                 name={<i className='fas fa-times'></i>}
               />
               <div className='pp-thumbnail'>
