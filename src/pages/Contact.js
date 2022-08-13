@@ -101,142 +101,133 @@ const Contact = () => {
     <>
       <Overlay />
       <Mouse />
-      <div className="main">
+      <div className='main'>
         <Header />
-        <section className="contact-section sec-padding active">
-          <div className="container">
-            <div className="row">
-              <div className="section-title">
+        <section className='contact-section sec-padding active'>
+          <div className='container'>
+            <div className='row'>
+              <div className='section-title'>
                 <h2>Contact Me</h2>
               </div>
             </div>
-            <div className="row">
+            <div className='row'>
               <div
-                className="contact-form"
-                data-aos="zoom-out-right"
-                data-aos-duration="1500"
-              >
+                className='contact-form'
+                data-aos='zoom-out-right'
+                data-aos-duration='1500'>
                 <form>
-                  <div className="row">
-                    <div className="input-group">
+                  <div className='row'>
+                    <div className='input-group'>
                       <input
-                        type="text"
-                        placeholder="Nom *"
-                        className="input-control"
+                        type='text'
+                        placeholder='Nom *'
+                        className='input-control'
                         required
-                        id="name"
-                        name="name"
+                        id='name'
+                        name='name'
                         onChange={(e) => setName(e.target.value)}
                         value={name}
-                        autoComplete="off"
+                        autoComplete='off'
                       />
                     </div>
 
-                    <label id="not-mail">Email non valide</label>
+                    <label id='not-mail'>Email non valide</label>
 
-                    <div className="input-group">
+                    <div className='input-group'>
                       <input
-                        type="text"
-                        placeholder="Email *"
-                        className="input-control"
+                        type='text'
+                        placeholder='Email *'
+                        className='input-control'
                         required
-                        id="email"
-                        name="email"
+                        id='email'
+                        name='email'
                         onChange={(e) => setEmail(e.target.value)}
                         value={email}
-                        autoComplete="off"
+                        autoComplete='off'
                       />
                     </div>
 
-                    <div className="input-group">
+                    <div className='input-group'>
                       <input
-                        type="text"
-                        placeholder="Sujet"
-                        className="input-control"
+                        type='text'
+                        placeholder='Sujet'
+                        className='input-control'
                         required
-                        id="subject"
-                        name="subject"
+                        id='subject'
+                        name='subject'
                         onChange={(e) => setSubject(e.target.value)}
                         value={subject}
                       />
                     </div>
 
-                    <div className="input-group">
+                    <div className='input-group'>
                       <textarea
-                        placeholder="Message *"
-                        className="input-control"
-                        id="message"
-                        name="message"
+                        placeholder='Message *'
+                        className='input-control'
+                        id='message'
+                        name='message'
                         onChange={(e) => setMessage(e.target.value)}
                         value={message}
-                        autoComplete="off"
-                      ></textarea>
+                        autoComplete='off'></textarea>
                     </div>
 
-                    <div className="submit-btn hover">
+                    <div className='submit-btn hover'>
                       <button
-                        type="submit"
-                        className="btn"
-                        onClick={handleSubmit}
-                      >
+                        type='submit'
+                        className='btn'
+                        onClick={handleSubmit}>
                         Envoyer
                       </button>
                     </div>
 
-                    <div className="form-message"></div>
+                    <div className='form-message'></div>
                   </div>
                 </form>
               </div>
 
-              <div className="contact-info">
+              <div className='contact-info'>
                 <div
-                  className="contact-info__item"
-                  data-aos="zoom-out-left"
-                  data-aos-duration="500"
-                >
+                  className='contact-info__item'
+                  data-aos='zoom-out-left'
+                  data-aos-duration='500'>
                   <h3>Email</h3>
-                  <p>armand_wadji@yahoo.fr</p>
+                  <p>armandwadji94@gmail.com</p>
                 </div>
 
                 <div
-                  className="contact-info__item"
-                  data-aos="zoom-out-left"
-                  data-aos-duration="1500"
-                >
+                  className='contact-info__item'
+                  data-aos='zoom-out-left'
+                  data-aos-duration='1500'>
                   <h3>Telephone</h3>
                   <p>0755973768</p>
                 </div>
 
                 <div
-                  className="contact-info__item"
-                  data-aos="zoom-out-left"
-                  data-aos-duration="2000"
-                >
+                  className='contact-info__item'
+                  data-aos='zoom-out-left'
+                  data-aos-duration='2000'>
                   <h3>Follow me</h3>
-                  <div className="social-links">
+                  <div className='social-links'>
                     <a
-                      href="https://www.linkedin.com/in/armand-wadji-dev"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover"
-                    >
-                      <i className="fab fa-linkedin-in"></i>
+                      href='https://www.linkedin.com/in/armand-wadji-dev'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='hover'>
+                      <i className='fab fa-linkedin-in'></i>
                     </a>
                     <a
-                      href="https://twitter.com/ArmandWadji"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover"
-                    >
-                      <i className="fab fa-twitter"></i>
+                      href='https://twitter.com/ArmandWadji'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='hover'>
+                      <i className='fab fa-twitter'></i>
                     </a>
                     <a
-                      href="https://github.com/armandwadji"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover"
-                    >
-                      <i className="fab fa-github"></i>
+                      href='https://github.com/armandwadji'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='hover'>
+                      <i className='fab fa-github'></i>
                     </a>
                   </div>
                 </div>
