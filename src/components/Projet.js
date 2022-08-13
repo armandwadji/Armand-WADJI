@@ -40,7 +40,7 @@ const Projet = ({ projet }) => {
 
               {website !== "" && (
                 <li>
-                  Lien du site -{" "}
+                  Lien du site :{" "}
                   <span>
                     <a
                       href={website}
@@ -53,7 +53,7 @@ const Projet = ({ projet }) => {
                 </li>
               )}
               <li>
-                Lien <i className='fab fa-github'></i> -{" "}
+                Lien <i className='fab fa-github'></i> :{" "}
                 <span>
                   <a
                     href={github}
