@@ -1,6 +1,4 @@
-// import axios from "axios";
 import React from "react";
-// { useState, useEffect }
 import Btn from "../components/Btn";
 import Header from "../components/Header";
 import Mouse from "../components/Mouse";
@@ -47,7 +45,6 @@ const Portfolio = () => {
 
   /**********FETCH API*************/
   // const [projects, setprojects] = useState("");
-  // setprojects(projectsData);
 
   // useEffect(() => {
   //   axios
