@@ -156,8 +156,9 @@ const About = () => {
                 </div>
                 {/*  BUTTON BOTTOM */}
                 <a
-                  href='https://i.postimg.cc/440KPDr3/ARMAND-WADJI-CV.png'
+                  href={require("../data/cv.pdf")}
                   target='_blank'
+                  download='Armand_WADJI_CV'
                   rel='noopener noreferrer'
                   className='hover '
                   data-aos='fade-up'
