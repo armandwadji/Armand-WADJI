@@ -160,7 +160,7 @@ const About = () => {
                   target='_blank'
                   download='Armand_WADJI_CV'
                   rel='noopener noreferrer'
-                  className='hover '
+                  className='hover dowload_cv'
                   data-aos='fade-up'
                   data-aos-duration='1000'
                   data-aos-once='false'>
