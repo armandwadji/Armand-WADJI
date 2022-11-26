@@ -12,18 +12,28 @@ const Projet = ({ projet }) => {
     github,
   } = projet;
 
+  const imageBackgroundStyle = {
+    backgroundImage: `url(${img})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center top",
+  };
+
   // console.log(github.split("/").at(-1).split(".").at(0));
 
   return (
     <>
       <div className='portfolio-item'>
         <div className='portfolio-item__thumbnail'>
-          <img src={img} alt={title} />
+          <div
+            className='portfolio-item__thumbnail--imgContainer'
+            style={imageBackgroundStyle}></div>
+          <img src={img} alt={title} className='screen-reader-text' />
         </div>
 
         <h3 className='portfolio-item__title'>{title}</h3>
 
-        <Btn name='view project' type='button' clas='btn hover' />
+        <Btn name='view project' type='button' className='btn hover' />
         <div className='portfolio-item__details'>
           <div className='description'>
             <p>{desc}</p>
@@ -38,7 +48,7 @@ const Projet = ({ projet }) => {
                 <span>{languages.map((language) => language).join(" /")}</span>
               </li>
 
-              {website !== "" && (
+              {website !== "" && website !== null && (
                 <li>
                   Lien du site :{" "}
                   <span>
