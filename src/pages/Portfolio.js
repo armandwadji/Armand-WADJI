@@ -1,11 +1,12 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import Btn from "../components/Btn";
 import Header from "../components/Header";
 import Mouse from "../components/Mouse";
 import Overlay from "../components/Overlay";
 import Projet from "../components/Projet";
 import Title from "../components/Title";
-import { projectsData } from "../data/Projectsdata";
+// import { projectsData } from "../data/Projectsdata";
 
 const Portfolio = () => {
   /*GESTION DE LA MODALE ET DE L'AFFICHAGE DE SES DIFFERENTS CONTENUS DIFFERENTS CONTENUS. */
@@ -44,18 +45,18 @@ const Portfolio = () => {
   /**********************************/
 
   /**********FETCH API*************/
-  // const [projects, setprojects] = useState("");
+  const [projectsData, setProjectsData] = useState("");
 
-  // useEffect(() => {
-  //   axios
-  //     .get("https://gentle-cove-03695.herokuapp.com/portfolio/projects/")
-  //     .then((res) => {
-  //       const {
-  //         data: { data },
-  //       } = res;
-  //       setprojects(data);
-  //     });
-  // }, []);
+  useEffect(() => {
+    axios
+      .get("https://gentle-cove-03695.herokuapp.com/portfolio/projects/")
+      .then((res) => {
+        const {
+          data: { data },
+        } = res;
+        setProjectsData(data);
+      });
+  }, []);
   /**********************************/
 
   return (
