@@ -3,7 +3,7 @@ export const AboutData = [
     educations: [
       {
         id: 1,
-        period: "Sept 2022 - Aout 2023",
+        period: "Sept 2022 - Sept 2023",
         title: "Dévéloppeur Web et mobile",
         school: "CEFIM L'école du Web et du Réseau (Tours)",
         studys: [
