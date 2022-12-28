@@ -27,13 +27,10 @@ const Portfolio = () => {
     document.querySelector(".main").classList.toggle("fade-out");
   };
 
-  const portfolioItemDetails = (portfolioItem) => {
-    /****COPIE D'iIMAGES */
-    document.querySelector(".pp-thumbnail img").src = portfolioItem.querySelector(".portfolio-item__thumbnail img").src;
-    /****COPIE DE TITRE */
-    document.querySelector(".pp-content h3").innerHTML = portfolioItem.querySelector(".portfolio-item__title").innerHTML;
-    /****COPIE DU DETAIL */
-    document.querySelector( ".pp-body" ).innerHTML = portfolioItem.querySelector( ".portfolio-item__details" ).innerHTML;
+  const portfolioItemDetails = async (portfolioItem) => {
+    document.querySelector(".pp-thumbnail img").src = await portfolioItem.querySelector(".portfolio-item__thumbnail img").src;
+    document.querySelector(".pp-content h3").innerHTML = await portfolioItem.querySelector(".portfolio-item__title").innerHTML;
+    document.querySelector( ".pp-body" ).innerHTML = await portfolioItem.querySelector( ".portfolio-item__details" ).innerHTML;
   };
   /**********************************/
 

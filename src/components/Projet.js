@@ -15,9 +15,7 @@ const Projet = ({ projet }) => {
     <>
       <div className='portfolio-item'>
         <div className='portfolio-item__thumbnail'>
-          <div
-            className='portfolio-item__thumbnail--imgContainer'
-            style={imageBackgroundStyle}></div>
+          <figure className='portfolio-item__thumbnail--imgContainer' style={imageBackgroundStyle}></figure>
           <img src={img} alt={title} className='screen-reader-text' />
         </div>
 
