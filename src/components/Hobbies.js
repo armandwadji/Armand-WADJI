@@ -11,9 +11,7 @@ const Hobbies = ({ hobbie }) => {
         {title} {who && "-"} <span>{who}</span>
       </h4>
       <ul>
-        {desc.map((work, index) => {
-          return <li key={index}>{work}</li>;
-        })}
+        {desc.map((work, index) =>  <li key={index}>{work}</li>)}
       </ul>
     </div>
   );

@@ -2,15 +2,7 @@ import React from "react";
 import Btn from "./Btn";
 
 const Projet = ({ projet }) => {
-  const {
-    title,
-    img,
-    desc,
-    // date,
-    languages,
-    website,
-    github,
-  } = projet;
+  const { title, img, desc, languages, website, github} = projet;
 
   const imageBackgroundStyle = {
     backgroundImage: `url(${img})`,
@@ -18,8 +10,6 @@ const Projet = ({ projet }) => {
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center top",
   };
-
-  // console.log(github.split("/").at(-1).split(".").at(0));
 
   return (
     <>
@@ -52,11 +42,7 @@ const Projet = ({ projet }) => {
                 <li>
                   Lien du site :{" "}
                   <span>
-                    <a
-                      href={website}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      className='hover '>
+                    <a href={website} target='_blank' rel='noopener noreferrer' className='hover '>
                       {website.split("/").at(-1).split(".").at(0)}
                     </a>
                   </span>
@@ -65,11 +51,7 @@ const Projet = ({ projet }) => {
               <li>
                 Lien <i className='fab fa-github'></i> :{" "}
                 <span>
-                  <a
-                    href={github}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='hover '>
+                  <a href={github} target='_blank' rel='noopener noreferrer' className='hover '>
                     {github.split("/").at(-1).split(".").at(0)}
                   </a>
                 </span>

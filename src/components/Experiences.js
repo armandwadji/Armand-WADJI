@@ -9,9 +9,7 @@ const Experiences = ({ experience }) => {
         {title} - <span>{entreprise}</span>
       </h4>
       <ul>
-        {works.map((work, index) => {
-          return <li key={index}>{work}</li>;
-        })}
+        {works.map((work, index) => <li key={index}>{work}</li>)}
       </ul>
     </div>
   );

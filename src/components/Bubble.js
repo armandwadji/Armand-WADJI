@@ -18,9 +18,7 @@ const Bubble = () => {
 
     bubble.style.setProperty("--left", `${Math.random() * 10 * plusMinus}%`);
 
-    setTimeout(() => {
-      bubble.remove();
-    }, 8000);
+    setTimeout(() => { bubble.remove() }, 8000);
   };
 
   setInterval(bubbleMaker, 5000);

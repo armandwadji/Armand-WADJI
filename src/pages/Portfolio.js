@@ -15,10 +15,7 @@ const Portfolio = () => {
       togglePortfolioPopup();
       portfolioItemDetails(e.target.parentElement);
       document.querySelector(".portfolio-popup").scrollTo(0, 0);
-    } else if (
-      e.target.classList.contains("fas") ||
-      e.target.classList.contains("pp-inner")
-    ) {
+    } else if ( e.target.classList.contains("fas") || e.target.classList.contains("pp-inner") ) {
       //   FONCTION pour supprimer en cliqaunt nimporte où
       togglePortfolioPopup();
     }
@@ -32,38 +29,29 @@ const Portfolio = () => {
 
   const portfolioItemDetails = (portfolioItem) => {
     /****COPIE D'iIMAGES */
-    document.querySelector(".pp-thumbnail img").src =
-      portfolioItem.querySelector(".portfolio-item__thumbnail img").src;
+    document.querySelector(".pp-thumbnail img").src = portfolioItem.querySelector(".portfolio-item__thumbnail img").src;
     /****COPIE DE TITRE */
-    document.querySelector(".pp-content h3").innerHTML =
-      portfolioItem.querySelector(".portfolio-item__title").innerHTML;
+    document.querySelector(".pp-content h3").innerHTML = portfolioItem.querySelector(".portfolio-item__title").innerHTML;
     /****COPIE DU DETAIL */
-    document.querySelector(".pp-body").innerHTML = portfolioItem.querySelector(
-      ".portfolio-item__details"
-    ).innerHTML;
+    document.querySelector( ".pp-body" ).innerHTML = portfolioItem.querySelector( ".portfolio-item__details" ).innerHTML;
   };
   /**********************************/
 
   /**********FETCH API*************/
   const [projectsData, setProjectsData] = useState("");
 
-  useEffect(() => {
+  useEffect( () => {
     axios
       .get("https://gentle-cove-03695.herokuapp.com/portfolio/projects/")
       .then((res) => {
-        const {
-          data: { data },
-        } = res;
+        const { data: { data } } = res;
         setProjectsData(data);
       });
   }, []);
   /**********************************/
 
   return (
-    <div
-      onClick={(e) => {
-        popup(e);
-      }}>
+    <div onClick={(e) =>  popup(e)}>
       <Overlay />
       <Mouse />
       <div className='main'>
@@ -74,25 +62,18 @@ const Portfolio = () => {
               <Title title='Portfolio' />
             </div>
             <div className='row'>
-              {/* UTILSATION DE REACT */}
-              {projectsData &&
-                projectsData.map((projet) => {
-                  return <Projet key={projet.id} projet={projet} />;
-                })}
+              {projectsData && projectsData.map((projet) => <Projet key={projet.id} projet={projet} /> )}
             </div>
           </div>
         </section>
       </div>
 
+      {/* MODAL */}
       <div className='portfolio-popup'>
         <div className='pp-inner'>
           <div className='pp-content'>
             <div className='pp-header'>
-              <Btn
-                type='button'
-                className='btn hover'
-                name={<i className='fas fa-times'></i>}
-              />
+              <Btn type='button' className='btn hover' name={<i className='fas fa-times'></i>} />
               <div className='pp-thumbnail'>
                 <img src='' alt='' />
               </div>

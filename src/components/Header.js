@@ -6,19 +6,15 @@ import DarkMode from "./DarkMode";
 const Header = () => {
   const hideSection = (e) => {
     document.querySelector("section.active").classList.toggle("fade-out");
-
     document.querySelector(".nav").classList.toggle("active");
   };
+  
   return (
     <div className="header hover" onClick={hideSection}>
       <div className="container">
         <div className="row flex-end ">
           <DarkMode />
-          <Btn
-            type="button"
-            clas="nav-toggler  "
-            name={<span className="hover"></span>}
-          />
+          <Btn type="button" clas="nav-toggler" name={<span className="hover"></span>} />
 
           <nav className="nav">
             <div className="nav-inner">
