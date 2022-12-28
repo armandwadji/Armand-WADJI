@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Btn from "../components/Btn";
 import Header from "../components/Header";
+import Loader from "../components/Loader";
 import Mouse from "../components/Mouse";
 import Overlay from "../components/Overlay";
 import Projet from "../components/Projet";
@@ -59,7 +60,7 @@ const Portfolio = () => {
               <Title title='Portfolio' />
             </div>
             <div className='row'>
-              {projectsData && projectsData.map((projet) => <Projet key={projet.id} projet={projet} /> )}
+              {projectsData ? projectsData.map((projet) => <Projet key={projet.id} projet={projet} /> ) : <Loader/>}
             </div>
           </div>
         </section>

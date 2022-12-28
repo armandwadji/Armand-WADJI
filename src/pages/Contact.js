@@ -6,16 +6,19 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import { init } from "@emailjs/browser";
-init("user_5tzk8dcH0bZNyNNvSqyAn");
+init(process.env.REACT_APP_USER_ID);
+
 
 const Contact = () => {
-  useEffect( () => { AOS.init(); }, [] );
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   const name = useRef("");
   const email = useRef("");
   const subject = useRef("");
   const message = useRef("");
-
+  
   const isEmail = () => {
     let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     let mail = document.getElementById("not-mail");
@@ -64,7 +67,7 @@ const Contact = () => {
     e.preventDefault();
 
     if (name.current.value && isEmail() && message.current.value) {
-      sendFeedback("template_g7nzc4s", {
+      sendFeedback(process.env.REACT_APP_TEMPLATE, {
         name: name.current.value,
         subject: subject.current.value,
         email: email.current.value,
@@ -75,9 +78,14 @@ const Contact = () => {
     }
   };
 
-  const sendFeedback = async ( templateId, variables ) => {
+  const sendFeedback = async (templateId, variables) => {
     try {
-      await window.emailjs.send( "service_4pm9daw", templateId, variables, "user_5tzk8dcH0bZNyNNvSqyAn" );
+      await window.emailjs.send(
+        process.env.REACT_APP_SERVICE,
+        templateId,
+        variables,
+        process.env.REACT_APP_USER_ID
+      );
       successMessage();
       name.current.value = "";
       email.current.value = "";
@@ -102,27 +110,58 @@ const Contact = () => {
               </div>
             </div>
             <div className='row'>
-              <div className='contact-form' data-aos='zoom-out-right' data-aos-duration='1500'>
-                
+              <div
+                className='contact-form'
+                data-aos='zoom-out-right'
+                data-aos-duration='1500'>
                 {/* FORM */}
                 <form onSubmit={handleSubmit}>
                   <div className='row'>
                     <div className='input-group'>
-                      <input  type='text' ref={name} placeholder='Nom *' className='input-control' required name='name' autoComplete='off' />
+                      <input
+                        type='text'
+                        ref={name}
+                        placeholder='Nom *'
+                        className='input-control'
+                        required
+                        name='name'
+                        autoComplete='off'
+                      />
                     </div>
 
                     <label id='not-mail'>Email non valide</label>
 
                     <div className='input-group'>
-                      <input type='text' ref={email} placeholder='Email *' className='input-control' required id='email' name='email' autoComplete='off' />
+                      <input
+                        type='text'
+                        ref={email}
+                        placeholder='Email *'
+                        className='input-control'
+                        required
+                        id='email'
+                        name='email'
+                        autoComplete='off'
+                      />
                     </div>
 
                     <div className='input-group'>
-                      <input type='text' ref={subject} placeholder='Sujet' className='input-control' required name='subject' />
+                      <input
+                        type='text'
+                        ref={subject}
+                        placeholder='Sujet'
+                        className='input-control'
+                        required
+                        name='subject'
+                      />
                     </div>
 
                     <div className='input-group'>
-                      <textarea placeholder='Message *' ref={message}  className='input-control' name='message' autoComplete='off'></textarea>
+                      <textarea
+                        placeholder='Message *'
+                        ref={message}
+                        className='input-control'
+                        name='message'
+                        autoComplete='off'></textarea>
                     </div>
 
                     <div className='submit-btn hover'>
@@ -137,26 +176,47 @@ const Contact = () => {
               </div>
 
               <div className='contact-info'>
-                <div className='contact-info__item' data-aos='zoom-out-left' data-aos-duration='500'>
+                <div
+                  className='contact-info__item'
+                  data-aos='zoom-out-left'
+                  data-aos-duration='500'>
                   <h3>Email</h3>
                   <p>armandwadji94@gmail.com</p>
                 </div>
 
-                <div className='contact-info__item' data-aos='zoom-out-left' data-aos-duration='1500'>
+                <div
+                  className='contact-info__item'
+                  data-aos='zoom-out-left'
+                  data-aos-duration='1500'>
                   <h3>Telephone</h3>
                   <p>0755973768</p>
                 </div>
 
-                <div className='contact-info__item' data-aos='zoom-out-left' data-aos-duration='2000'>
+                <div
+                  className='contact-info__item'
+                  data-aos='zoom-out-left'
+                  data-aos-duration='2000'>
                   <h3>Follow me</h3>
                   <div className='social-links'>
-                    <a href='https://www.linkedin.com/in/armand-wadji-dev' className='hover' target='_blank' rel='noopener noreferrer' >
+                    <a
+                      href='https://www.linkedin.com/in/armand-wadji-dev'
+                      className='hover'
+                      target='_blank'
+                      rel='noopener noreferrer'>
                       <i className='fab fa-linkedin-in'></i>
                     </a>
-                    <a href='https://twitter.com/ArmandWadji' target='_blank' rel='noopener noreferrer' className='hover'>
+                    <a
+                      href='https://twitter.com/ArmandWadji'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='hover'>
                       <i className='fab fa-twitter'></i>
                     </a>
-                    <a href='https://github.com/armandwadji' target='_blank' rel='noopener noreferrer' className='hover'>
+                    <a
+                      href='https://github.com/armandwadji'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='hover'>
                       <i className='fab fa-github'></i>
                     </a>
                   </div>

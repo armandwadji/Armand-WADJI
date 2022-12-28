@@ -88,28 +88,28 @@ export const AboutData = [
       },
       {
         id: 4,
-        title: "Java",
-        icon: "fab fa-java",
-        color: "rgb(54,112,160)",
-      },
-      {
-        id: 5,
         title: "Git",
         icon: "fab fa-git",
         color: "rgb(232,79,49)",
       },
       {
-        id: 6,
+        id: 5,
         title: "Sass",
         icon: "fab fa-sass",
         color: "rgb(208,119,164)",
+      },
+      {
+        id: 6,
+        title: "Java",
+        icon: "fab fa-java",
+        color: "rgb(54,112,160)",
       },
       {
         id: 7,
         title: "Python",
         icon: "fab fa-python",
         color: "rgb(54,112,160)",
-      },
+      }
     ],
   },
   {
