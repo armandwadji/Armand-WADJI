@@ -206,3 +206,12 @@ ul {
 .flex-end {
   justify-content: flex-end;
 }
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  width: 1px;
+  position: absolute;
+  white-space: nowrap;
+}

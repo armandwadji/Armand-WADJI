@@ -1,6 +1,6 @@
 {
   "name": "cv-port-folio",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
@@ -9,10 +9,9 @@
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
     "axios": "^0.27.2",
+    "dotenv": "^16.0.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-native": "^0.67.1",
-    "react-native-a": "^1.0.1",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "sass": "^1.49.0",

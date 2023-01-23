@@ -10,13 +10,12 @@
       background-color: $white-alpha-25;
       border: 1px solid $white-alpha-40;
       border-radius: 10px;
-      height: 60%;
+      height: 220px;
       margin-bottom: 20px;
 
-      img {
-        width: 100%;
+      &--imgContainer {
         height: 100%;
-        object-fit: fill;
+        width: 100%;
         border-radius: 10px;
       }
     }

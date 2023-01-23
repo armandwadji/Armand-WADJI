@@ -8,16 +8,15 @@ const Mouse = () => {
       cursor.style.left = e.pageX + "px";
     };
 
-    const handleHover = () => {
-      cursor.classList.add("hovered");
-    };
+    const handleHover = () => cursor.classList.add("hovered");
 
     const handleLeave = () => {
       cursor.classList.remove("hovered");
       cursor.style.transition = "0.3s ease-out ";
     };
 
-    window.addEventListener("mousemove", handleCursor);
+    window.addEventListener( "mousemove", handleCursor );
+    
     document.querySelectorAll(".hover").forEach((link) => {
       link.addEventListener("mouseover", handleHover);
       link.addEventListener("mouseleave", handleLeave);

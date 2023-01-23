@@ -1,13 +1,7 @@
 import React from "react";
 
 const DarkMode = () => {
-  const darkModeClass = (e) => {
-    if (e.target.checked) {
-      document.body.classList.add("darkmode");
-    } else {
-      document.body.classList.remove("darkmode");
-    }
-  };
+  const darkModeClass = ( e ) => { document.body.classList[ e.target.checked ? "add" : "remove" ]( "darkmode" ) };
 
   return (
     <label className="darkMode">

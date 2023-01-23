@@ -10,9 +10,7 @@ const Education = ({ education }) => {
       </h4>
 
       <ul>
-        {studys.map((study, index) => {
-          return <li key={index}>{study}</li>;
-        })}
+        {studys.map((study, index) => <li key={index}>{study}</li>)}
       </ul>
     </div>
   );
