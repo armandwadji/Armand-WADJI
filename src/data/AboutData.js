@@ -3,28 +3,40 @@ export const AboutData = [
     educations: [
       {
         id: 1,
-        period: "Sept 2022 - Sept 2023",
-        title: "Dévéloppeur Web et mobile",
-        school: "CEFIM L'école du Web et du Réseau (Tours)",
+        period: "Oct 2023 - Sept 2024",
+        title: "Concepteur Développeur d'Applications",
+        school: "CEFIM (Tours)",
         studys: [
-          "HTML/ CSS / SASS/ BOOSTRAP",
-          "JAVASCRIPT / React JS",
-          "PHP/ SYMPHONY",
-          "WORDPRESS / Adobe XD/ Gestion de projet",
+          "JAVA / SPRING",
+          "SQL / DROITS / SECURITE / INTEGRITE",
+          "GESTION DE PROJET / DEVOPS",
+          "CI / CD",
         ],
       },
       {
         id: 2,
+        period: "Sept 2022 - Sept 2023",
+        title: "Dévéloppeur Web et mobile",
+        school: "CEFIM (Tours)",
+        studys: [
+          "HTML/ CSS / SASS/ BOOSTRAP",
+          "JAVASCRIPT / REACT JS",
+          "PHP/ SYMPHONY",
+          "STRAPI / FIGMA / GESTION DE PROJET",
+        ],
+      },
+      {
+        id: 3,
         period: "Sept 2021 - Aout 2022",
         title: "Formation en autodidacte",
         school: "Diverses plateformes de cours en lignes",
         studys: ["FRANCEIOI", "OPENCLASSROOMS", "CODECADEMY", "FREE-CODE-CAMP"],
       },
       {
-        id: 3,
+        id: 4,
         period: "Sept 2021- Sept 2017",
-        title: "Master 2 Ingénierie et conception Mécanique INPAM",
-        school: "Université du Maine - LE MANS",
+        title: "Master 2 Ingénierie numérique et conception Mécanique INPAM",
+        school: "Université du Maine (Le Mans)",
         studys: ["CATIA", "SOLIDWORKS", "SIEMENS", "MATLAB"],
       },
     ],
@@ -33,8 +45,20 @@ export const AboutData = [
     experiences: [
       {
         id: 1,
+        period: "Aout 2022 - Sept 2023",
+        title: "Développeur Web et Mobile (Alternance)",
+        entreprise: "APOTAMOX (Le Mans)",
+        works: [
+          "Mise en place d'un schéma relationnel de données et développement de cette Database (MSSQL).",
+          "Développement des composant d'accès aux données (API REST NodeJS).",
+          "Mise en place d'une documentation des différents endpoints de l'API (Swagger)",
+          "Développement d'un Back office pour la manipulation coté front de la Database (ReactJS).",
+        ],
+      },
+      {
+        id: 2,
         period: "janv 2018 - Aout 2021",
-        title: "Professeur de Maths-Sciences",
+        title: "Professeur de Mathématique-Physique-Chimie",
         entreprise: "LPO Raphael Elyze (Sablé Sur Sarthe)",
         works: [
           "Cours d’initiations au langage PYTHON depuis la réforme du Bac de 2019.",
@@ -44,19 +68,19 @@ export const AboutData = [
         ],
       },
       {
-        id: 2,
+        id: 3,
         period: "Fev 2017 - Sept 2017",
-        title: "Ingénieur stagiaire en bureaux d'études",
+        title: "Ingénieur en bureaux d'études",
         entreprise: "BETA EPSILON (le Mans)",
         works: [
           "Conception d'un banc de test de résistance pour le châssis d'un véhicule électrique.",
-          "Automatisation de la procédure de test par programmation d'une automate SIEMENS.",
+          "Automatisation de la procédure de test par programmation d'un automate SIEMENS.",
           "Coordination entre la maquette 3D SOLIDWORKS et la fabrication en atelier.",
           "Mise en place d'une documetation des procédures de tests.",
         ],
       },
       {
-        id: 3,
+        id: 4,
         period: "Janv 2015 - Aout 2015",
         title: "STAGIAIRE",
         entreprise: "CFAO",
@@ -70,21 +94,27 @@ export const AboutData = [
     skills: [
       {
         id: 1,
-        title: "javascript",
-        icon: "fab fa-js",
-        color: "rgb(214,186,50)",
-      },
-      {
-        id: 2,
         title: "React",
         icon: "fab fa-react",
         color: "rgb(104,220,251)",
       },
       {
-        id: 3,
+        id: 2,
         title: "Node.js",
         icon: "fab fa-node-js",
         color: "rgb(83,157,67)",
+      },
+      {
+        id: 3,
+        title: "Php",
+        icon: "fab fa-php",
+        color: "rgb(97,129,182)",
+      },
+      {
+        id: 6,
+        title: "Java",
+        icon: "fab fa-java",
+        color: "rgb(54,112,160)",
       },
       {
         id: 4,
@@ -94,22 +124,10 @@ export const AboutData = [
       },
       {
         id: 5,
-        title: "Sass",
-        icon: "fab fa-sass",
+        title: "Database",
+        icon: "fas fa-database",
         color: "rgb(208,119,164)",
       },
-      {
-        id: 6,
-        title: "Java",
-        icon: "fab fa-java",
-        color: "rgb(54,112,160)",
-      },
-      {
-        id: 7,
-        title: "Python",
-        icon: "fab fa-python",
-        color: "rgb(54,112,160)",
-      }
     ],
   },
   {

@@ -70,13 +70,7 @@ const About = () => {
               <div className='about-text'>
                 <p data-aos='zoom-out-left' data-aos-duration='1000' data-aos-delay='500'>
                   J'ai {new Date().getFullYear() - 1994} ans et j'ai été
-                  professeur de Maths - Sciences pendant 4 ans. Après une année
-                  de formation du code en autodidacte, j'ai décidé aujourd’hui,
-                  dans le cadre d'une reconversion professionnelle, de faire de
-                  la programmation mon métier. J'ai donc intégré l'école de
-                  formation CEFIM pour une année d'alternance que j'effectue
-                  dans la société APOTAMOX en tant que Developpeur Web et
-                  Mobile.
+                  professeur de Mathématique pendant 4 ans. Ayant entamé une reconversion professionnelle dans le numérique  depuis près d'un an en tant que développeur Web  en alternance, Je suis à la recherche d'une entreprise où effectuer ma deuxième année de contrat d'apprentissage d'un an dans le but de continuer de monter en compétences.
                 </p>
                 <h3 data-aos='zoom-out' data-aos-duration='1000'>
                   Skills

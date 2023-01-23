@@ -28,7 +28,7 @@ const Home = () => {
               <div className='home-text' data-aos='fade-right' data-aos-anchor='#example-anchor' data-aos-offset='500' data-aos-duration='1000'>
                 <p>Hello, je me présente</p>
                 <h1>Armand WADJI</h1>
-                <h2>Developpeur d'applications Web et mobile</h2>
+                <h2>Concepteur développeur d'applications</h2>
 
                 <NavLink to='/about' exact='true' className='hover' data-aos-delay='3000'>
                   <Btn name='About Me' />
