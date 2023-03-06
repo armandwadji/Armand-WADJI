@@ -112,7 +112,7 @@ const Contact = () => {
             <div className='row'>
               <div className='contact-form' data-aos='zoom-out-right' data-aos-duration='1500'>
                 {/* FORM */}
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} data-netlify="true">
                   <div className='row'>
                     <div className='input-group'>
                       <input type='text' ref={name} placeholder='Nom *' className='input-control' required name='name' autoComplete='off'/>
