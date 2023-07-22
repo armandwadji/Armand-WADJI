@@ -13,7 +13,7 @@ import Pagination from "../components/Pagination/Pagination";
 const Portfolio = () => {
 
   const [ projectsData, setProjectsData ] = useState( [] );
-  const [ pagination, setPagination ] = useState( {} );
+  const [ pagination, setPagination ] = useState( {page: 1} );
   const [ detail, setDetail ] = useState( null );
 
   useEffect( () => {
