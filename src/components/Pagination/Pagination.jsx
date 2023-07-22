@@ -6,14 +6,14 @@ const Pagination = ({pagination, setPagination}) => {
         <div className='pagination-container'>
             <button
                 className={ `pagination-change pagination-decrease ${pagination.page === 1 ? 'disabled' : ''}` }
-                onClick={ _ =>  pagination.page > 1 && setPagination( prev => ( { ...prev, page: prev.page-- } ) ) }
+                onClick={ _ =>  pagination.page > 1 && setPagination( prev => ( { ...prev, page: prev.page - 1 } ) ) }
             >
                 &lt;
             </button>
             <span className='pagination-count'>{ pagination.page }</span>
             <button
                 className={ `pagination-change pagination-increase ${pagination.pageCount === pagination.page ? 'disabled' : ''}` }
-                onClick={ _ => pagination.pageCount > pagination.page && setPagination( prev => ( { ...prev, page: prev.page++ } ) ) }
+                onClick={ _ => pagination.pageCount > pagination.page && setPagination( prev => ( { ...prev, page: prev.page + 1 } ) ) }
             >
                 &gt;
             </button>
