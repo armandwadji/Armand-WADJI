@@ -1,0 +1,35 @@
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 80px));
+  row-gap: 0.2rem;
+
+  .skill-item {
+    text-transform: capitalize;
+    margin: 0 5px 5px 0;
+    border-radius: 20px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 60px;
+    width: 60px;
+
+    &-imgContainer {
+      display: flex;
+      height: 50px;
+      width: 50px;
+      margin-block-end: 4px;
+
+      &-img {
+        align-self: center;
+      }
+    }
+
+    p {
+      margin-top: 0.2rem;
+      text-transform: capitalize;
+      color: $blue-dark;
+      font-size: 0.6rem;
+    }
+  }
+}
