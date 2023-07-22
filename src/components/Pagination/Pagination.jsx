@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Pagination = ({pagination, setPagination}) => {
-
+    console.log(pagination);
     return (
         <div className='pagination-container'>
             <button
