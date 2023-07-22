@@ -1,21 +1,24 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Btn from "../components/Btn";
-import Header from "../components/Header";
+import Btn from "../components/Btn/Btn";
+import Header from "../components/Header/Header";
 import Mouse from "../components/Mouse";
 import Overlay from "../components/Overlay";
-import Title from "../components/Title";
+import Skills from "../components/Skills/Skills";
+import Education from "../components/Education/Education";
+import Experiences from "../components/Experiences/Experiences";
+import Hobbies from "../components/Hobbies/Hobbies";
+import Title from "../components/Title/Title";
+import API from "../data/API";
 import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
-import { AboutData } from "../data/AboutData";
-import Skills from "../components/Skills";
-import Education from "../components/Education";
-import Experiences from "../components/Experiences";
-import Hobbies from "../components/Hobbies";
 
 const About = () => {
-  //UseEffect pour les animations
-  useEffect( () => { AOS.init() }, [] );
+  const [profil, setProfil] = useState(null);
+
+  useEffect(() => {
+    AOS.init();
+    API.getProfil().then((data) => setProfil(data));
+  }, []);
 
   //Toggle pour l'expérience et l'éducation. Hobbies à rajouter
   const toggleClass = (e) => {
@@ -46,8 +49,6 @@ const About = () => {
     });
   };
 
-  const [{ educations }, { experiences }, { skills }, { hobbies }] = AboutData;
-
   return (
     <>
       <Overlay />
@@ -56,31 +57,36 @@ const About = () => {
         <Header />
         <section className='about-section sec-padding active'>
           <div className='container'>
-            <div className='row' data-aos='zoom-out-left' data-aos-duration='1000'>
+            <div
+              className='row'
+              data-aos='zoom-out-left'
+              data-aos-duration='1000'>
               <Title title='About Me' />
             </div>
 
             <div className='row'>
-              <div className='about-img' data-aos='fade-down' data-aos-easing='linear' data-aos-duration='1000'>
+              <div
+                className='about-img'
+                data-aos='fade-down'
+                data-aos-easing='linear'
+                data-aos-duration='1000'>
                 <figure className='img-box'>
-                  <img src='https://i.postimg.cc/nzdkWwzL/profil.jpg' alt='about-pic' />
+                  <img src={(process.env.REACT_APP_NODE_ENV === 'development' ? process.env.REACT_APP_API_URL_DEV : '')  + profil?.image.url} alt={profil?.name} />
                 </figure>
               </div>
 
               <div className='about-text'>
-                <p data-aos='zoom-out-left' data-aos-duration='1000' data-aos-delay='500'>
-                  J'ai {new Date().getFullYear() - 1994} ans et j'ai été
-                  professeur de Mathématique pendant 4 ans. Ayant entamé une reconversion professionnelle dans le numérique  depuis près d'un an en tant que développeur Web  en alternance, Je suis à la recherche d'une entreprise où effectuer ma deuxième année de contrat d'apprentissage d'un an dans le but de continuer de monter en compétences.
+                <p
+                  data-aos='zoom-out-left'
+                  data-aos-duration='1000'
+                  data-aos-delay='500'>
+                  {profil?.description}
                 </p>
                 <h3 data-aos='zoom-out' data-aos-duration='1000'>
-                  Skills
+                  {" "}
+                  Skills{" "}
                 </h3>
-
-                {/* SKILLS  */}
-                <div className='skills' data-aos='zoom-out' data-aos-duration='1000'>
-                  {skills.map((skill) => <Skills key={skill.id} skill={skill} /> )}
-                </div>
-
+                <Skills />
                 {/* BUTTTONS  */}
                 <div className='about-tabs' onClick={(e) => toggleClass(e)}>
                   <button className='tab-item active hover' data-id='education'>
@@ -95,34 +101,30 @@ const About = () => {
                     Hobbies
                   </button>
                 </div>
-
                 {/* EDUCATION */}
-                <div className='tab-content active ' id='education' data-aos='zoom-in-right' data-aos-duration='1000'>
-                  <div className='timeline'>
-                    {educations.map((education) => <Education key={education.id} education={education} /> )}
-                  </div>
-                </div>
-
+                <Education />
                 {/* Experience */}
-                <div className='tab-content' id='experience'>
-                  <div className='timeline'>
-                    {experiences.map((experience) => <Experiences key={experience.id} experience={experience} /> )}
-                  </div>
-                </div>
-
+                <Experiences />
                 {/* HOBBIES */}
-                <div className='tab-content' id='hobbies'>
-                  <div className='timeline'>
-                    {hobbies.map((hobbie) => <Hobbies key={hobbie.id} hobbie={hobbie} /> )}
-                  </div>
-                </div>
-
-                {/*  BUTTON BOTTOM */}
-                <a href={require("../data/cv.pdf")} className='hover dowload_cv' target='_blank' download='Armand_WADJI_CV' rel='noopener noreferrer'  data-aos='fade-up'  data-aos-duration='1000' data-aos-once='false'>
+                <Hobbies />
+                <a
+                  href={ process.env.REACT_APP_NODE_ENV === 'development' ? process.env.REACT_APP_API_URL_DEV : '' + profil?.cv.url }
+                  className='hover dowload_cv'
+                  target='_blank'
+                  download='Armand_WADJI_CV'
+                  rel='noopener noreferrer'
+                  data-aos='fade-up'
+                  data-aos-duration='1000'
+                  data-aos-once='false'>
                   <Btn name='Dowload CV' type='button' />
-                </a>
-                { " " }
-                <Link to='/contact' className='hover' exact='true' data-aos='fade-up' data-aos-duration='500' data-aos-once='false'>
+                </a>{" "}
+                <Link
+                  to='/contact'
+                  className='hover'
+                  exact='true'
+                  data-aos='fade-up'
+                  data-aos-duration='500'
+                  data-aos-once='false'>
                   <Btn name='Contact me' type='button' />
                 </Link>
               </div>

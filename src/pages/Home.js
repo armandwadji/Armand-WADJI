@@ -1,17 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import Btn from "../components/Btn";
 import Bubble from "../components/Bubble";
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 import Mouse from "../components/Mouse";
 import Overlay from "../components/Overlay";
+import Btn from "../components/Btn/Btn";
+import Loader from "../components/Loader";
 import AOS from "aos";
-import "aos/dist/aos.css";
+import API from "../data/API";
 
 const Home = () => {
+  const [ profil, setProfil ] = useState( null );
+  
   useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, []);
+    AOS.init( { duration: 2000 } );
+    API.getProfil().then( data => setProfil( data ) );
+  }, [] );
+  
+  console.log(process.env.NODE_ENV);
 
   return (
     <>
@@ -23,12 +29,13 @@ const Home = () => {
         <Bubble />
         <Header />
         <section className='home-section active'>
-          <div className='container'>
+          { profil
+            ? <div className='container'>
             <div className='row align-item-center'>
               <div className='home-text' data-aos='fade-right' data-aos-anchor='#example-anchor' data-aos-offset='500' data-aos-duration='1000'>
                 <p>Hello, je me présente</p>
-                <h1>Armand WADJI</h1>
-                <h2>Concepteur développeur d'applications</h2>
+                  <h1>{ profil.name }</h1>
+                <h2> {profil.job} </h2>
 
                 <NavLink to='/about' exact='true' className='hover' data-aos-delay='3000'>
                   <Btn name='About Me' />
@@ -41,11 +48,13 @@ const Home = () => {
 
               <div className='home-img' data-aos='fade-left' data-aos-anchor='#example-anchor' data-aos-offset='500' data-aos-duration='1100'>
                 <figure className='img-box'>
-                  <img src='https://i.postimg.cc/nzdkWwzL/profil.jpg' alt='Profil-img' />
+                  <img src={(process.env.REACT_APP_NODE_ENV === 'development' ? process.env.REACT_APP_API_URL_DEV : '')  + profil.image.url} alt={profil.name} />
                 </figure>
               </div>
             </div>
-          </div>
+              </div>
+            : <Loader />
+          }
         </section>
       </div>
       {/* main end */}

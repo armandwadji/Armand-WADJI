@@ -3,6 +3,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
+import "aos/dist/aos.css";
 
 function App() {
   //Evenement de loading pour effectuer le darkmode en fonction de l'heure de visite de l'utilisateur
@@ -20,7 +21,8 @@ function App() {
     if (document.body.classList.contains("darkmode")) {
       check.checked = true;
     }
-  });
+  } );
+  
   return (
     <>
       <Routes>

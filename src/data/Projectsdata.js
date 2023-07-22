@@ -59,4 +59,14 @@ export const projectsData = [
     website: "",
     github: "https://github.com/armandwadji/Comfy-Store-App.git",
   },
+  {
+    id: 7,
+    title: "Devjob - Front🛋 🪑",
+    date: "Decembre 2022",
+    languages: ["HTML", "SASS", "JacaScript"],
+    desc: "Application React-Native du site Comfy Store initialement fait en JavaScript Vanilla.",
+    img: "https://user-images.githubusercontent.com/90448006/199209995-29551e76-0c4c-41da-bcef-929150a69d00.jpg",
+    website: "https://wadji.cefim.o2switch.site/Devjob_front",
+    github: "https://github.com/armandwadji/Devjob_Front.git",
+  },
 ];

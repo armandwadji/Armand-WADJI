@@ -40,8 +40,6 @@
         row-gap: 0.2rem;
 
         .skill-item {
-          // background-color: red;
-          padding: 5px 15px;
           text-transform: capitalize;
           margin: 0 5px 5px 0;
           border-radius: 20px;
@@ -52,16 +50,20 @@
           height: 60px;
           width: 60px;
 
-          i {
-            width: calc(100% / 8 - 5px);
-            font-size: 2.8rem;
+          &-imgContainer{
+            display: flex;
+            height: 50px;
+            width: 50px;
+            margin-block-end: 4px;
 
-            @media (max-width: 767px) {
-              width: calc(100% / 4 - 5px);
+            &-img{
+              align-self: center;
             }
           }
+
           p {
             margin-top: 0.2rem;
+            text-transform: capitalize;
             color: $blue-dark;
             font-size: 0.6rem;
           }
@@ -156,6 +158,16 @@
               border-radius: 50%;
               left: 0;
               top: 16px;
+            }
+
+            &-hobbie{
+              display: block;
+              margin-inline-start: 0;
+              img{
+                width: 60px;
+                object-fit: cover;
+              }
+
             }
 
             .date {

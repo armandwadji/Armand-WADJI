@@ -1,0 +1,113 @@
+.portfolio-popup {
+    color: $blue-dark;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 200;
+    visibility: hidden;
+  
+    &.open {
+      visibility: visible;
+      overflow-y: auto;
+      
+      .pp-content {
+        opacity: 1 !important;
+        transform: scale(1) !important;
+        transition: all .5s ease-in-out;
+      }
+    }
+  
+    .pp-inner {
+      min-height: 100vh;
+      padding: 40px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      .pp-content {
+        background-color: $white-alpha-25;
+        padding: 30px;
+        width: 100%;
+        max-width: 900px;
+        border-radius: 30px;
+        border: 1px solid $white-alpha-40;
+        backdrop-filter: $backdrop-filter-blur;
+        opacity: 0;
+        transform: scale(0.8);
+  
+        .pp-header {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+  
+          .btn {
+            height: 40px;
+            width: 40px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: -55px;
+            top: -40px;
+  
+            i {
+              transform: scale(2);
+              z-index: 10000;
+            }
+          }
+  
+          .pp-thumbnail {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+  
+            img {
+              border-radius: 10px;
+            }
+          }
+        }
+  
+        h3 {
+          font-size: 20px;
+          text-transform: capitalize;
+          margin: 20px 0 15px;
+        }
+  
+        .pp-body {
+          .description {
+            margin-bottom: 20px;
+  
+            p {
+              font-weight: 200;
+            }
+          }
+  
+          .general-info {
+            li {
+              margin-bottom: 10px;
+              font-weight: 500;
+              text-transform: capitalize;
+  
+              span {
+                font-weight: 300;
+  
+                a {
+                  text-transform: lowercase;
+                  color: $main_color;
+                }
+              }
+            }
+          }
+        }
+      }
+      @media (max-width: 575px) {
+        padding: 30px 15px;
+      }
+    }
+  }

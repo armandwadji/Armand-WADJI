@@ -34,7 +34,7 @@ export const AboutData = [
       },
       {
         id: 4,
-        period: "Sept 2021- Sept 2017",
+        period: "Sept 2015- Sept 2017",
         title: "Master 2 Ingénierie numérique et conception Mécanique INPAM",
         school: "Université du Maine (Le Mans)",
         studys: ["CATIA", "SOLIDWORKS", "SIEMENS", "MATLAB"],
