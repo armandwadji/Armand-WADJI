@@ -10,7 +10,7 @@ const Pagination = ( { pagination, setPagination } ) => {
             >
                 &lt;
             </button>
-            <span className='pagination-count'>{ pagination.page }</span>
+            <span className='pagination-count'>{ pagination.page } / { pagination.pageCount  }</span>
             <button
                 className={ `pagination-change pagination-increase ${pagination.pageCount === pagination.page ? 'disabled' : ''}` }
                 onClick={ _ => pagination.pageCount > pagination.page && setPagination( prev => ( { ...prev, page: prev.page + 1 } ) ) }
