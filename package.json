@@ -2,6 +2,7 @@
   "name": "cv-port-folio",
   "version": "0.1.1",
   "private": true,
+  "homepage": "https://armandwadji.netlify.app",
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
     "@testing-library/jest-dom": "^5.16.1",
