@@ -4,9 +4,7 @@ import API from "../../data/API";
 const Hobbies = () => {
   const [hobbies, setHobbies] = useState([]);
 
-  useEffect(() => {
-    API.getHobbies().then((data) => setHobbies(data));
-  }, []);
+  useEffect( _ => API.getHobbies().then( ( data ) => setHobbies( data ) ), [] );
 
   return (
     <div className='tab-content' id='hobbies'>

@@ -66,7 +66,7 @@ class API {
 
     static async getSkills () {
         const query = {
-            fields: ["id", "name"],
+            fields: ["id", "name", "sort"],
             populate: {
               icon: {
                 fields: ["url"],

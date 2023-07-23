@@ -4,9 +4,7 @@ import API from '../../data/API';
 const Info = () => {
     const [ contact, setContact ] = useState( {} );
     
-    useEffect(() => {
-        API.getContact().then( data => setContact( data ) );
-    }, [] );
+    useEffect( _ => API.getContact().then( data => setContact( data ) ), [] );
     
     return (
         <div className='contact-info'>

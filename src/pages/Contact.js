@@ -8,9 +8,7 @@ import Form from "../components/Form/Form";
 
 const Contact = () => {
 
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  useEffect( _ => AOS.init(), [] );
 
   return (
     <>

@@ -5,7 +5,7 @@ import { dateFormat } from "../../utils";
 const Education = () => {
   const [educations, setEducations] = useState([]);
 
-  useEffect(() => API.getEducations().then((data) => setEducations(data)), []);
+  useEffect( _ => API.getEducations().then( ( data ) => setEducations( data ) ), [] );
 
   return (
     <div

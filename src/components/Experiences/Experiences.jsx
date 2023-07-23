@@ -5,10 +5,7 @@ import { dateFormat } from "../../utils";
 const Experiences = () => {
   const [experiences, setExperiences] = useState([]);
 
-  useEffect(
-    () => API.getExperiences().then((data) => setExperiences(data)),
-    []
-  );
+  useEffect( _ => API.getExperiences().then( ( data ) => setExperiences( data ) ), [] );
 
   return (
     <div className='tab-content' id='experience'>
