@@ -32,7 +32,7 @@ const Portfolio = () => {
         <section className='portfolio-section sec-padding active'>
           <div className='container'>
             <div className='row'>
-              <Title title='Portfolio' />
+              <Title title='Projects' />
             </div>
             <div className='row'>
               { projectsData.length > 0
