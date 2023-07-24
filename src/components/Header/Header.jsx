@@ -26,16 +26,16 @@ const Header = () => {
               <ul>
                 {/* Armand-WADJI */}
                 <Link to='/' className='nav-item'>
-                  <li> Home</li>
+                  <li>Home</li>
                 </Link>
                 <Link to='/about' className='nav-item'>
-                  <li>about</li>
+                  <li>About</li>
                 </Link>
                 <Link to='/portfolio' className='nav-item'>
-                  <li> portfolio</li>
+                  <li>Projects</li>
                 </Link>
                 <Link to='/contact' className='nav-item'>
-                  <li> contact</li>
+                  <li>Contact</li>
                 </Link>
               </ul>
             </div>
