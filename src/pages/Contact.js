@@ -14,9 +14,9 @@ const Contact = () => {
     <>
       <Overlay />
       <Mouse />
-      <div className='main'>
+      <div className='container'>
         <Header />
-        <section className='contact-section sec-padding active'>
+        <main className='contact-section sec-padding active'>
           <div className='container'>
             <div className='row'>
               <div className='section-title'>
@@ -28,7 +28,7 @@ const Contact = () => {
               <Info/>
             </div>
           </div>
-        </section>
+        </main>
       </div>
     </>
   );

@@ -25,10 +25,10 @@ const Home = () => {
       <Mouse />
 
       {/* main start */}
-      <div className='main '>
+      <div className='container'>
         <Bubble />
         <Header />
-        <section className='home-section active'>
+        <main className='home-section active'>
           { profil
             ? <div className='container'>
             <div className='row align-item-center'>
@@ -55,7 +55,7 @@ const Home = () => {
               </div>
             : <Loader />
           }
-        </section>
+        </main>
       </div>
       {/* main end */}
     </>

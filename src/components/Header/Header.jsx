@@ -6,20 +6,16 @@ import Btn from "../Btn/Btn";
 
 const Header = () => {
   const hideSection = (e) => {
-    document.querySelector("section.active").classList.toggle("fade-out");
+    document.querySelector("main.active").classList.toggle("fade-out");
     document.querySelector(".nav").classList.toggle("active");
   };
 
   return (
-    <div className='header hover' onClick={hideSection}>
+    <header className='header hover' onClick={hideSection}>
       <div className='container'>
         <div className='row flex-end '>
           <DarkMode />
-          <Btn
-            type='button'
-            clas='nav-toggler'
-            name={<span className='hover'></span>}
-          />
+          <Btn type='button' clas='nav-toggler' name={<span className='hover'></span>}/>
 
           <nav className='nav'>
             <div className='nav-inner'>
@@ -42,7 +38,7 @@ const Header = () => {
           </nav>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

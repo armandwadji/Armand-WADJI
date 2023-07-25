@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header/Header";
 import Loader from "../components/Loader";
-import Mouse from "../components/Mouse";
 import Overlay from "../components/Overlay";
 import Projet from "../components/Projet";
 import Modal from "../components/Modal/Modal";
@@ -26,10 +25,9 @@ const Portfolio = () => {
   return (
     <div>
       <Overlay />
-      <Mouse />
-      <div className={`main ${detail ? 'fade-out' : ''}`}>
+      <div className={`container ${detail ? 'fade-out' : ''}`}>
         <Header />
-        <section className='portfolio-section sec-padding active'>
+        <main className='portfolio-section sec-padding active'>
           <div className='container'>
             <div className='row'>
               <Title title='Projects' />
@@ -44,10 +42,10 @@ const Portfolio = () => {
             </div>
           </div>
           <Pagination pagination={ pagination } setPagination={ setPagination } posts={ projectsData } />
-        </section>
+        </main>
       </div>
       
-      { detail && <Modal detail={ detail } setDetail={setDetail} />}
+      <Modal detail={ detail } setDetail={setDetail} />
     </div>
   );
 };

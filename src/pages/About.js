@@ -27,7 +27,7 @@ const About = () => {
       <Mouse />
       <div className='main'>
         <Header />
-        <section className='about-section sec-padding active'>
+        <main className='about-section sec-padding active'>
           <div className='container'>
             <div className='row' data-aos='zoom-out-left' data-aos-duration='1000'>
               <Title title='About Me' />
@@ -91,7 +91,7 @@ const About = () => {
               </div>
             </div>
           </div>
-        </section>
+        </main>
       </div>
     </>
   );

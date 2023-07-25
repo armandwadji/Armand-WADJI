@@ -3,10 +3,9 @@ import { timestampPost } from '../../utils';
 import Btn from '../Btn/Btn';
 
 const Modal = ( { detail , setDetail} ) => {
-  const { title, image: { url: image }, description, date, languages, website, github } = detail;
   
     return (
-      <div className='portfolio-popup open'>
+      <div className={`portfolio-popup  ${detail ? 'open' : ''}`}>
       <div className='pp-inner'>
         <div className='pp-content'>
             <div className='pp-header'>
@@ -14,31 +13,31 @@ const Modal = ( { detail , setDetail} ) => {
                 <Btn type='button' className='btn hover' name={<i className='fas fa-times' ></i>} />
               </div>
             <div className='pp-thumbnail'>
-              <img src={(process.env.REACT_APP_NODE_ENV === 'development' ? process.env.REACT_APP_API_URL_DEV : '') + image} alt={title} />
+              <img src={(process.env.REACT_APP_NODE_ENV === 'development' ? process.env.REACT_APP_API_URL_DEV : '') + detail?.image?.url} alt={detail?.title} />
             </div>
           </div>
-          <h3>{title}</h3>
+          <h3>{detail?.title}</h3>
           <div className='pp-body'>
             <div className='portfolio-item__details'>
               <div className='description'>
-                <p>{description}</p>
+                <p>{detail?.description}</p>
               </div>
               <div className='general-info'>
                 <ul>
                   <li>
-                    Publié il y'a - <span>{timestampPost((new Date(date).getTime() )) }</span>
+                    Publié il y'a - <span>{timestampPost((new Date(detail?.date).getTime() )) }</span>
                   </li>
                   <li>
                     Technologies utilisées -{" "}
-                    <span>{languages.map((language) => language.name).join(" /")}</span>
+                    <span>{detail?.languages.map((language) => language.name).join(" /")}</span>
                   </li>
 
-                  {website !== "" && website !== null && (
+                  {detail?.website !== "" && detail?.website !== null && (
                     <li>
                       Lien du site :{" "}
                       <span>
-                        <a href={website} target='_blank' rel='noopener noreferrer' className='hover '>
-                          {website.split("/").at(-1).split(".").at(0)}
+                        <a href={detail?.website} target='_blank' rel='noopener noreferrer' className='hover '>
+                          {detail?.website.split("/").at(-1).split(".").at(0)}
                         </a>
                       </span>
                     </li>
@@ -46,8 +45,8 @@ const Modal = ( { detail , setDetail} ) => {
                   <li>
                     Lien <i className='fab fa-github'></i> :{" "}
                     <span>
-                      <a href={github} target='_blank' rel='noopener noreferrer' className='hover '>
-                        {github.split("/").at(-1).split(".").at(0)}
+                      <a href={detail?.github} target='_blank' rel='noopener noreferrer' className='hover '>
+                        {detail?.github.split("/").at(-1).split(".").at(0)}
                       </a>
                     </span>
                   </li>

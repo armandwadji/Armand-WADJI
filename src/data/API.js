@@ -30,7 +30,7 @@ class API {
             },
             pagination: {
               page: page,
-              pageSize: 9,
+              pageSize: 6,
             },
         };
         

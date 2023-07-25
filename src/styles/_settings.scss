@@ -101,7 +101,7 @@ body.darkmode {
   }
 }
 
-section {
+main {
   background-color: $white-alpha-25;
   border: 1px solid $white-alpha-40;
   min-height: calc(100vh - 70px);
@@ -178,7 +178,7 @@ ul {
   background-color: $main_color;
 }
 
-.main {
+.container {
   position: relative;
   max-width: 1200px;
   margin: auto;
