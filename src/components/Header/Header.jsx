@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <header className='header hover' onClick={hideSection}>
       <div className='container'>
-        <div className='row flex-end '>
+        <div className='row header-buttons '>
           <DarkMode />
           <Btn type='button' clas='nav-toggler' name={<span className='hover'></span>}/>
 

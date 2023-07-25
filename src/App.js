@@ -4,6 +4,8 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import "aos/dist/aos.css";
+import Overlay from "./components/Overlay";
+import Header from "./components/Header/Header";
 
 function App() {
   //Evenement de loading pour effectuer le darkmode en fonction de l'heure de visite de l'utilisateur
@@ -25,6 +27,9 @@ function App() {
   
   return (
     <>
+      <Overlay />
+      <Header />
+
       <Routes>
         {/* Armand-WADJI */}
         <Route path="/" element={<Home />} />

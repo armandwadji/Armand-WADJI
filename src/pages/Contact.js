@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
-import Header from "../components/Header/Header";
 import Mouse from "../components/Mouse";
-import Overlay from "../components/Overlay";
 import AOS from "aos";
 import Info from "../components/Info/Info";
 import Form from "../components/Form/Form";
@@ -12,10 +10,8 @@ const Contact = () => {
 
   return (
     <>
-      <Overlay />
       <Mouse />
       <div className='container'>
-        <Header />
         <main className='contact-section sec-padding active'>
           <div className='container'>
             <div className='row'>

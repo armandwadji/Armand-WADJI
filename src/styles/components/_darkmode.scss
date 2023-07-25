@@ -1,10 +1,8 @@
 .darkMode {
-  position: absolute;
-  left: 30px;
-  top: 30px;
 
   input[type="checkbox"] {
-    -webkit-appearance: none;
+    appearance: none;
+    // -webkit-appearance: none;
     visibility: hidden;
     display: none;
 

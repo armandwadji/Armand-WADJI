@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Header from "../components/Header/Header";
 import Loader from "../components/Loader";
-import Overlay from "../components/Overlay";
 import Projet from "../components/Projet";
 import Modal from "../components/Modal/Modal";
 import API from "../data/API";
@@ -23,10 +21,8 @@ const Portfolio = () => {
   }, [pagination.page] );
 
   return (
-    <div>
-      <Overlay />
+    <>
       <div className={`container ${detail ? 'fade-out' : ''}`}>
-        <Header />
         <main className='portfolio-section sec-padding active'>
           <div className='container'>
             <div className='row'>
@@ -44,9 +40,9 @@ const Portfolio = () => {
           <Pagination pagination={ pagination } setPagination={ setPagination } posts={ projectsData } />
         </main>
       </div>
-      
       <Modal detail={ detail } setDetail={setDetail} />
-    </div>
+      
+    </>
   );
 };
 

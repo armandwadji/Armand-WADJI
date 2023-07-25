@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Btn from "../components/Btn/Btn";
-import Header from "../components/Header/Header";
 import Mouse from "../components/Mouse";
-import Overlay from "../components/Overlay";
 import Skills from "../components/Skills/Skills";
 import Education from "../components/Education/Education";
 import Experiences from "../components/Experiences/Experiences";
@@ -23,10 +21,8 @@ const About = () => {
 
   return (
     <>
-      <Overlay />
       <Mouse />
       <div className='main'>
-        <Header />
         <main className='about-section sec-padding active'>
           <div className='container'>
             <div className='row' data-aos='zoom-out-left' data-aos-duration='1000'>

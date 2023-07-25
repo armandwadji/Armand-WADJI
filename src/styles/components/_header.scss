@@ -4,7 +4,19 @@
   top: 0;
   width: 100%;
   z-index: 1;
-  padding: 20px 0 0;
+  padding: 2rem 0 0;
+
+  &-buttons{
+    // background-color: red;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+    align-items: center;
+
+    @media (max-width: 575px) {
+      padding-inline:  3rem;
+    }
+  }
 
   .nav-toggler {
     width: 50px;
@@ -16,7 +28,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 40px;
+    // margin: 0 40px;
     z-index: 1;
 
     span {
