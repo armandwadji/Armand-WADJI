@@ -15,12 +15,12 @@ const Info = () => {
                 :  <div className='contact-info'>
                         <div className='contact-info__item' data-aos='zoom-out-left' data-aos-duration='500'>
                             <h3>Email</h3>
-                            <p> {contact?.email} </p>
+                            <p> {contact.email} </p>
                         </div>
 
                         <div className='contact-info__item' data-aos='zoom-out-left' data-aos-duration='1500'>
                             <h3>Telephone</h3>
-                            <p>+33 {contact?.phone} </p>
+                            <p>+33 {contact.phone} </p>
                         </div>
 
                         <div className='contact-info__item' data-aos='zoom-out-left' data-aos-duration='2000'>
