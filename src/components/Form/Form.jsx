@@ -76,25 +76,22 @@ const Form = () => {
   
     const sendFeedback = async ( templateId, variables ) => {
   
-        await window.emailjs.send(
-          process.env.REACT_APP_SERVICE,
-          templateId,
-          variables,
-          process.env.REACT_APP_USER_ID
-        ).then( _ => {
-          setForm(templateForm);
-          setMessage( { ...message, contain: "Message envoyé.", status: true } );
+      await window.emailjs.send(
+        process.env.REACT_APP_SERVICE,
+        templateId,
+        variables,
+        process.env.REACT_APP_USER_ID
+      ).then( _ => {
+        setForm( templateForm );
+        setMessage( { ...message, contain: "Message envoyé.", status: true } );
   
-        } ).catch( _ => {
-          setMessage( {...message, contain: "Une erreur s'est produite, veuillez réessayer."} );
-        });
+      } ).catch( _ => setMessage( { ...message, contain: "Une erreur s'est produite, veuillez réessayer." } ) );
         
       hiddenMessage();
     };
 
     return (
-        <div className='contact-form' data-aos='zoom-out-right' data-aos-duration='1500'>
-        {/* FORM */}
+      <div className='contact-form' data-aos='zoom-out-right' data-aos-duration='1500'>
         <form onSubmit={handleSubmit} data-netlify="true">
           <div className='row'>
             <div className='input-group error'>

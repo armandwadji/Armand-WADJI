@@ -13,20 +13,16 @@ const Education = ({show}) => {
       <div className='timeline'>
         {educations
           .sort( (a, b) =>new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime() )
-          .map((education) => <div className='timeline-item' key={education.id}>
+          .map( education => <div className='timeline-item' key={education.id}>
                                 <span className='date'>
-                                  {dateFormat(education?.experience.start)} /{" "}
-                                  {dateFormat(education?.experience.end)}
+                                  {dateFormat(education?.experience.start)} / {dateFormat(education?.experience.end)}
                                 </span>
                                 <h4>
-                                  {education?.experience.name} -{" "}
-                                  <span>{education?.experience.establishment} </span>
+                                  {education?.experience.name} - <span>{education?.experience.establishment} </span>
                                 </h4>
 
                                 <ul>
-                                  {education.studys.map((study) => (
-                                    <li key={study.id}>{study.name}</li>
-                                  ))}
+                                  {education.studys.map( study =>  <li key={study.id}>{study.name}</li> )}
                                 </ul>
                               </div>
           )}

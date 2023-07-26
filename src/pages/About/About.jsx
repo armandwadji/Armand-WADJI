@@ -43,9 +43,7 @@ const About = () => {
                     <p data-aos='zoom-out-left' data-aos-duration='1000' data-aos-delay='500'>
                       {profil?.description}
                     </p>
-                    <h3 data-aos='zoom-out' data-aos-duration='1000'>
-                      Skills :
-                    </h3>
+                    <h3 data-aos='zoom-out' data-aos-duration='1000'> Skills : </h3>
                     <Skills />
                     
                     {/* BUTTTONS  */}

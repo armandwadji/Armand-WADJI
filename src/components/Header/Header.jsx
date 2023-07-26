@@ -20,19 +20,18 @@ const Header = () => {
           <nav className='nav'>
             <div className='nav-inner'>
               <ul>
-                {/* Armand-WADJI */}
-                <Link to='/' className='nav-item'>
-                  <li>Home</li>
-                </Link>
-                <Link to='/about' className='nav-item'>
-                  <li>About</li>
-                </Link>
-                <Link to='/portfolio' className='nav-item'>
-                  <li>Projects</li>
-                </Link>
-                <Link to='/contact' className='nav-item'>
-                  <li>Contact</li>
-                </Link>
+                <li className='nav-item'>
+                  <Link to='/' className="nav-link"> Home </Link>
+                </li>
+                <li className='nav-item'>
+                  <Link to='/about'className="nav-link"> About </Link>
+                </li>
+                <li className='nav-item'>
+                  <Link to='/portfolio' className="nav-link">Projects</Link>
+                </li>
+                <li className='nav-item'>
+                  <Link to='/contact' className="nav-link">Contact</Link>
+                </li>
               </ul>
             </div>
           </nav>

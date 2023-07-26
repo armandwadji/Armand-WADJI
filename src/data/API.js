@@ -1,6 +1,13 @@
 import { flattenStrapiObject, queryStringFormat } from "../utils";
 
 class API {
+  
+  /**
+   * Fetch global maethod
+   * @param {string} endPoint 
+   * @param {Array} params 
+   * @returns 
+   */
     static async fetchData( endPoint, params = []) {
       try {
             const BASE_URL = (process.env.REACT_APP_NODE_ENV === 'development') ? process.env.REACT_APP_API_URL_DEV :process.env.REACT_APP_API_URL_PROD
@@ -13,6 +20,11 @@ class API {
         }
     }
     
+    /**
+     * Get projetcs by six sizes and with pagination
+     * @param int page 
+     * @returns 
+     */
     static async getProjects (page=1) {
         const query = {
             fields: ["id", "title", "description", "date", "website", "github" ],
@@ -38,6 +50,10 @@ class API {
         return {data: flattenStrapiObject(result), meta: result.meta};
     }
 
+  /**
+   * Get data for Home page
+   * @returns 
+   */
     static async getProfil () {
         const query = {
             fields: ["id", "name", "job", "date", "website", "github", "description" ],
@@ -55,6 +71,10 @@ class API {
         return flattenStrapiObject(result);
     }
 
+  /**
+   * Get data for contact page
+   * @returns 
+   */
     static async getContact () {
         const query = {
             fields: [ "email", "phone", "date", "github", "twitter", "linkedin" ],
@@ -64,6 +84,10 @@ class API {
         return flattenStrapiObject(result);
     }
 
+  /**
+   * Get all Skills 
+   * @returns 
+   */
     static async getSkills () {
         const query = {
             fields: ["id", "name", "sort"],
@@ -78,6 +102,10 @@ class API {
         return flattenStrapiObject(result);
     }
 
+    /**
+   * Get all Hobbies 
+   * @returns 
+   */
     static async getHobbies () {
         const query = {
             fields: ["id", "name", "who", "createdAt"],
@@ -95,6 +123,10 @@ class API {
         return flattenStrapiObject(result);
     }
 
+    /**
+   * Get all Educations 
+   * @returns 
+   */
     static async getEducations () {
         const query = {
             fields: ["createdAt"],
@@ -112,6 +144,10 @@ class API {
         return flattenStrapiObject(result);
     }
 
+    /**
+   * Get all Experiences 
+   * @returns 
+   */
     static async getExperiences () {
         const query = {
             fields: ["createdAt"],
@@ -128,7 +164,5 @@ class API {
         const result = await this.fetchData( `professionals?${queryStringFormat( query )}` );
         return flattenStrapiObject(result);
     }
-    
-
 }
 export default API;

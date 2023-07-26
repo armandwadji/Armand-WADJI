@@ -2,14 +2,14 @@ import React from 'react';
 import { timestampPost } from '../../utils';
 import Btn from '../Btn/Btn';
 
-const Modal = ( { detail , setDetail} ) => {
+const Modal = ( { detail, setPortfolio} ) => {
   
     return (
       <div className={`portfolio-popup  ${detail ? 'open' : ''}`}>
       <div className='pp-inner'>
         <div className='pp-content'>
             <div className='pp-header'>
-              <div onClick={()=> setDetail(null)}>
+              <div onClick={ _ => setPortfolio( prev => ({...prev, detail: null}) )}>
                 <Btn type={'button'} clas={'btn hover'} name={<i className='fas fa-times' ></i>} />
               </div>
             <div className='pp-thumbnail'>
@@ -28,8 +28,7 @@ const Modal = ( { detail , setDetail} ) => {
                     Publié il y'a - <span>{timestampPost((new Date(detail?.date).getTime() )) }</span>
                   </li>
                   <li>
-                    Technologies utilisées -{" "}
-                    <span>{detail?.languages.map((language) => language.name).join(" /")}</span>
+                    Technologies utilisées -  <span>{detail?.languages.map((language) => language.name).join(" /")}</span>
                   </li>
 
                   {detail?.website !== "" && detail?.website !== null && (
