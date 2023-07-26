@@ -20,7 +20,7 @@ const Projects = () => {
 
   useEffect( () => {
     
-    API.getProjects( pagination.page ).then( ( { data : projects, meta: { pagination } } ) => setPortfolio( prev => ( { ...prev, projects, pagination } ) ) );
+    API.getProjects( pagination.page ).then( ( { data : projects, meta: { pagination } } ) => setPortfolio( prev => ( { ...prev, projects, pagination, mouse: false  } ) ) );
     
     setTimeout( _ => setPortfolio( prev => ( { ...prev, mouse: true } ) ), 500 );
     

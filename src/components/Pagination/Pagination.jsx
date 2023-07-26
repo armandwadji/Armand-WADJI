@@ -14,7 +14,7 @@ const Pagination = ( { pagination, setPortfolio } ) => {
       <span className='pagination-count'> {page} / {pageCount} </span>
       <button 
         className={`pagination-change pagination-increase hover ${ pagination.pageCount === pagination.page ? "disabled" : ""}`}
-        onClick={ _ => pageCount > page && setPortfolio( prev => ( { ...prev, pagination: ( { ...prev.pagination, page : prev.pagination.page + 1 } ), mouse: false } ) ) }> 
+        onClick={ _ => pageCount > page && setPortfolio( prev => ( { ...prev, pagination: ( { ...prev.pagination, page : prev.pagination.page + 1 } ) } ) ) }> 
         &gt;
       </button>
     </div>
