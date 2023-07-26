@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
-import Mouse from "../components/Mouse";
+import Mouse from "../../components/Mouse/Mouse";
 import AOS from "aos";
-import Info from "../components/Info/Info";
-import Form from "../components/Form/Form";
+import Info from "../../components/Info/Info";
+import Form from "../../components/Form/Form";
 
 const Contact = () => {
-
-  useEffect( _ => AOS.init(), [] );
+  useEffect((_) => AOS.init(), []);
 
   return (
     <>
@@ -20,8 +19,8 @@ const Contact = () => {
               </div>
             </div>
             <div className='row'>
-              <Form/>
-              <Info/>
+              <Form />
+              <Info />
             </div>
           </div>
         </main>

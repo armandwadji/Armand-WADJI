@@ -10,7 +10,7 @@ const Modal = ( { detail , setDetail} ) => {
         <div className='pp-content'>
             <div className='pp-header'>
               <div onClick={()=> setDetail(null)}>
-                <Btn type='button' className='btn hover' name={<i className='fas fa-times' ></i>} />
+                <Btn type={'button'} clas={'btn hover'} name={<i className='fas fa-times' ></i>} />
               </div>
             <div className='pp-thumbnail'>
               <img src={(process.env.REACT_APP_NODE_ENV === 'development' ? process.env.REACT_APP_API_URL_DEV : '') + detail?.image?.url} alt={detail?.title} />

@@ -1,11 +1,12 @@
 import { Route, Routes } from "react-router-dom";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Home from "./pages/Home";
-import Portfolio from "./pages/Portfolio";
-import "aos/dist/aos.css";
-import Overlay from "./components/Overlay";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
+import Home from "./pages/Home/Home";
+import Projects from "./pages/Projects/Projects";
+import Overlay from "./components/Overlay/Overlay";
 import Header from "./components/Header/Header";
+import "aos/dist/aos.css";
+import Bubble from "./components/Bubble/Bubble";
 
 function App() {
   //Evenement de loading pour effectuer le darkmode en fonction de l'heure de visite de l'utilisateur
@@ -23,19 +24,19 @@ function App() {
     if (document.body.classList.contains("darkmode")) {
       check.checked = true;
     }
-  } );
-  
+  });
+
   return (
     <>
+      <Bubble/>
       <Overlay />
       <Header />
 
       <Routes>
-        {/* Armand-WADJI */}
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/portfolio' element={<Projects />} />
       </Routes>
     </>
   );
