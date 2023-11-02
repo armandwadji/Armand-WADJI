@@ -25,7 +25,7 @@ const About = () => {
       <Mouse />
       { !profil
         ? <Loader />
-        : <div className='main'>
+        : <div className='container'>
             <main className='about-section sec-padding active'>
               <div className='container'>
                 <div className='row' data-aos='zoom-out-left' data-aos-duration='1000'>
